@@ -1,0 +1,33 @@
+body{
+    background-color: lightcyan;
+}
+
+h1{
+    background-color: skyblue;
+    border-style: groove;
+    border-color: lightblue;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#nav{
+    float: left;
+    background-color: skyblue;
+    border-style: groove;
+    border-color: lightblue;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+table#navtable{
+    width: 100px;
+    height: 500px;
+
+}
+
+table#navtable td{
+
+    text-align: center;
+    border-style: groove;
+}
