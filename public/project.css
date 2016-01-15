@@ -1,0 +1,42 @@
+body{
+    background-color: whitesmoke;
+}
+
+h1{
+    background-color: mediumseagreen;
+    color: whitesmoke;
+    border-style: groove;
+    border-color: seagreen;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right:0px;
+    margin-bottom:5px;
+    padding: 10px;
+
+}
+
+a:link{
+    float: left;
+    background-color: mediumseagreen;
+    border-style: outset;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 2px;
+    margin: 2px;
+    font-size:20px;
+}
+
+a:visited{
+    color: whitesmoke;
+}
+
+a:hover{
+    background-color: #22d15c;
+}
+
+a:active{
+    background-color: #22d15c;
+    border-style: inset;
+
+}
