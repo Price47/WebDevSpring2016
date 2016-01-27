@@ -3,53 +3,43 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href= "css/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous">
+
+    <title>Web Development</title>
 </head>
 
 <body>
+<nav class="navbar Header">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <strong>Web Development Spring 2016</strong>
+        </div>
+    </div>
+</nav>
 
-    <h1> Web Development Spring 2016</h1>
-
-    <div id= "nav">
-        <table id="navtable">
-            <tr>
-                <td>
-                    <a href="./hello.html"> Hello </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="assignment/home.html"> Assignment </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="project/project.html"> Project </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="./hello.html"> link 4 </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="./hello.html"> link 5 </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="./hello.html"> link 6 </a>
-                </td>
-            </tr>
-        </table>
+    <div id="nav" class="container-fluid col-xs-4 col-sm-2">
+        <ul class="nav nav-sidebar">
+           <li><a href="./hello.html"> Hello </a></li>
+           <li><a href="assignment/home.html"> Assignment </a></li>
+           <li><a href="project/project.html"> Project </a></li>
+           <li><a href="./hello.html"> link 4 </a></li>
+        </ul>
 
     </div>
 
-    <div id = "body">
+    <div id = "body" class="container col-xs-16 col-sm-8">
         <h3> this is a body </h3>
+        <div class="input-group date" data-provide="datepicker">
+            <input type="text" class="form-control">
+            <div class="input-group-addon">
+                <span class="glyphicon glyphicon-th"></span>
+            </div>
+        </div>
     </div>
 
-    <div id= "about">
-        <img id="about_me" src="Pictures/about_me.jpg">
+    <div id="about" class="container col-xs-5 col-sm-2" >
+        <img src="Pictures/about_me.jpg" class="img-responsive img-rounded" width="825" height="825">
     </div>
 </body>
