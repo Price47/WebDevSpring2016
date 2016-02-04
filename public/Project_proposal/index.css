@@ -1,0 +1,99 @@
+body{
+    background-color: whitesmoke;
+    padding-top: 50px
+
+}
+
+h3{
+    color: whitesmoke;
+    text-align: center;
+
+}
+
+#nav{
+    float: left;
+}
+
+#header{
+    background-color: #6bb590;
+    border: none;
+}
+
+.navbar-header > a,
+.navbar-header > a:visited{
+    background-color: #6bb590;
+    text-decoration: none;
+    color: #dddddd;
+    margin:0;
+}
+
+.navbar-header > a:hover,
+.navbar-header > a:focus{
+    background-color: #6bb590;
+    text-decoration: none;
+    color: white;
+    margin:0;
+}
+
+.navbar-header{
+    color:whitesmoke;
+    margin-top: 10px;
+}
+
+.nav-sidebar{
+    margin-right: -15px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+.nav-sidebar > li > a,
+.nav-sidebar > li> a:visited{
+    background-color: #6bb590;
+    text-decoration: none;
+    color:whitesmoke;
+    margin:0;
+}
+.nav-sidebar > li > a:hover,
+.nav-sidebar > li >  a:focus{
+    color: #6bb590;
+
+}
+
+#body{
+    background-color: whitesmoke;
+}
+
+#about{
+    background-color: #ececec;
+}
+
+.Header{
+    background-color: #6bb590;
+}
+
+.button-nav{
+    padding: 5px;
+}
+
+.nav-tabs{
+    background-color:whitesmoke;
+
+}
+.tab-content{
+    padding:5px;
+}
+.nav-tabs > li > a{
+    border: medium none;
+    color: #437c60 !important;
+}
+.nav-tabs > li > a:hover{
+    background-color: white !important;
+    color: #6bb590 !important;
+    border: medium none;
+    border-radius: 3px;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color: white !important;
+    color:#6bb590 !important;
+}
