@@ -5,10 +5,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/Project_proposal/index.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/Project_proposal/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/Project_proposal/wire_frames.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project-proposal/index.css" afterPath="$PROJECT_DIR$/public/project-proposal/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project-proposal/index.html" afterPath="$PROJECT_DIR$/public/project-proposal/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project-proposal/wire_frames.html" afterPath="$PROJECT_DIR$/public/project-proposal/wire_frames.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project/project.html" afterPath="$PROJECT_DIR$/public/project/project.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project-proposal/diagram.html" afterPath="$PROJECT_DIR$/public/project-proposal/diagram.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/project-proposal/links.html" afterPath="$PROJECT_DIR$/public/project-proposal/links.html" />
     </list>
     <ignored path="WebDevSpringSemester2016.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +31,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="65" />
               <folding />
             </state>
@@ -42,28 +41,40 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/project-proposal/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.208333">
+            <state vertical-scroll-proportion="0.0">
               <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="133" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="links.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="links.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/project-proposal/links.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15189873">
-              <caret line="30" column="81" selection-start-line="30" selection-start-column="81" selection-end-line="30" selection-end-column="81" />
+            <state vertical-scroll-proportion="-11.458333">
+              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wire_frames.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/project-proposal/wire_frames.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.083333">
+              <caret line="32" column="64" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="diagram.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="diagram.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/project-proposal/diagram.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.46835443">
+              <caret line="36" column="114" selection-start-line="36" selection-start-column="114" selection-end-line="36" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -115,11 +126,11 @@
         <option value="$PROJECT_DIR$/public/Project_proposal/index.html" />
         <option value="$PROJECT_DIR$/public/project/project.html" />
         <option value="$PROJECT_DIR$/public/project-proposal/index.html" />
-        <option value="$PROJECT_DIR$/public/project-proposal/wire_frames.html" />
-        <option value="$PROJECT_DIR$/public/project-proposal/diagram.html" />
         <option value="$PROJECT_DIR$/public/project-proposal/links.css" />
         <option value="$PROJECT_DIR$/public/project-proposal/index.css" />
+        <option value="$PROJECT_DIR$/public/project-proposal/wire_frames.html" />
         <option value="$PROJECT_DIR$/public/project-proposal/links.html" />
+        <option value="$PROJECT_DIR$/public/project-proposal/diagram.html" />
       </list>
     </option>
   </component>
@@ -130,7 +141,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="145" />
-    <option name="y" value="49" />
+    <option name="y" value="79" />
     <option name="width" value="1076" />
     <option name="height" value="736" />
   </component>
@@ -159,8 +170,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -388,7 +399,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="145" y="49" width="1076" height="736" extended-state="0" />
+    <frame x="145" y="79" width="1076" height="736" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28345725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -425,6 +436,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/project-proposal/diagram.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -734,7 +753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/project-proposal/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.208333">
+        <state vertical-scroll-proportion="0.0">
           <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="133" />
           <folding />
         </state>
@@ -752,7 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,30 +778,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49367088">
           <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/project-proposal/wire_frames.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73417723">
+        <state vertical-scroll-proportion="-9.083333">
           <caret line="32" column="64" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/project-proposal/diagram.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/project-proposal/links.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15189873">
-          <caret line="30" column="81" selection-start-line="30" selection-start-column="81" selection-end-line="30" selection-end-column="81" />
+        <state vertical-scroll-proportion="-11.458333">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/project-proposal/diagram.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46835443">
+          <caret line="36" column="114" selection-start-line="36" selection-start-column="114" selection-end-line="36" selection-end-column="114" />
           <folding />
         </state>
       </provider>
