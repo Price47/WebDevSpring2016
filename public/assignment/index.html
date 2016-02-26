@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FormBuilderApp">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="views/admin/admin.controller.js"></script>
+    <script src="views/forms/forms-fields.controller.js"></script>
+    <script src="views/forms/forms.controller.js"></script>
+    <script src="views/header/header.controller.js"></script>
+    <script src="views/home/home.controller.js"></script>
+    <script src="views/sidebar/sidebar.controller.js"></script>
+    <script src="views/users/login.controller.js"></script>
+    <script src="views/users/profile.controller.js"></script>
+    <script src="views/users/register.controller.js"></script>
+    <meta charset="UTF-8">
+    <title>Form Builder App</title>
+</head>
+<body>
+    <ng-include src="'views/header/header.view.html'"></ng-include>
+    <div class="container-fluid" style="padding-top: 50px">
+
+        <div class="row">
+            <ng-include src="'views/sidebar/sidebar.view.html'" class="col-sm-3 col-md-2 sidebar"></ng-include>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view></div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
