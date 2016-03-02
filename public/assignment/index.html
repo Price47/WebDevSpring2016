@@ -16,19 +16,27 @@
     <script src="views/users/login.controller.js"></script>
     <script src="views/users/profile.controller.js"></script>
     <script src="views/users/register.controller.js"></script>
+    <script src="views/main/main.controller.js"></script>
+    <script src="services/user.service.client.js"></script>
     <meta charset="UTF-8">
     <title>Form Builder App</title>
 </head>
 <body>
-    <ng-include src="'views/header/header.view.html'"></ng-include>
-    <div class="container-fluid" style="padding-top: 50px">
 
-        <div class="row">
-            <ng-include src="'views/sidebar/sidebar.view.html'" class="col-sm-3 col-md-2 sidebar"></ng-include>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view></div>
+    <div ng-controller="MainController">
+        <ng-include src="'views/header/header.view.html'"></ng-include>
+        <div class="container-fluid" style="padding-top: 50px;">
+
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                <ng-include src="'views/sidebar/sidebar.view.html'"></ng-include>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div ng-view></div>
+                </div>
+            </div>
         </div>
     </div>
-
 
 
 

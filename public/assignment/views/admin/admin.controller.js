@@ -6,7 +6,24 @@
         .module("FormBuilderApp")
         .controller("AdminController",AdminController);
 
-    function AdminController(){
+    function AdminController($location, $scope, $rootScope, UserService){
+        $scope.users = UserService.users;
+
+        $scope.deleteUser = function(user) {
+            console.log("delete");
+            UserService.deleteUserById(user)
+        };
+
+        $scope.addUser = function(user){
+            console.log("create " + user.username);
+            UserService.createUser(user);
+        };
+
+        $scope.editUser = function(user){
+            console.log("edit" + user);
+            UserService.setCurrentUser(user);
+            $location.url("/profile");
+        }
 
     }
 })();

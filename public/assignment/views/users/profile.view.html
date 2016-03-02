@@ -6,14 +6,14 @@
 
 <body>
 <div class="container-fluid">
-            <h1 class="page-header">Dashboard</h1>
+            <h1 class="page-header">Welcome {{currentUser.firstName}}!</h1>
 
             <div class="row">
                 <div class="col-xs-6 col-sm-3">
                     <h5>Username:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Username">
+                    <input ng-model="user.username" placeholder={{currentUser.username}}>
                 </div>
             </div>
             <div class="row">
@@ -21,7 +21,7 @@
                     <h5>Password:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Password">
+                    <input ng-model="user.password" placeholder={{currentUser.password}}>
                 </div>
             </div>
             <div class="row">
@@ -29,7 +29,7 @@
                     <h5>First Name:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="First Name">
+                    <input ng-model="user.firstName" placeholder={{currentUser.firstName}}>
                 </div>
             </div>
             <div class="row">
@@ -37,20 +37,20 @@
                     <h5>Last Name:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Last Name">
+                    <input ng-model="user.lastName" placeholder={{currentUser.lastName}}>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-6 col-sm-3">
-                    <h5>Email:</h5>
+                    <h5>Roles:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Email">
+                    <input ng-model="user.roles" placeholder={{currentUser.roles}}>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-offset-6  col-sm-offset-3 col-xs-18 col-sm-9">
-                    <button type="button"> UPDATE </button>
+                    <button ng-click="update(user)"> UPDATE </button>
                 </div>
             </div>
 

@@ -14,7 +14,7 @@
                     <h5>Username:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Username">
+                    <input ng-model="user.username" class="form-control">
                 </div>
             </div>
             <div class="row">
@@ -22,28 +22,36 @@
                     <h5>Password:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Password">
+                    <input ng-model="user.password" class="form-control">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-6 col-sm-3">
-                    <h5>Verify Password:</h5>
+                    <h5>First Name:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Password">
+                    <input ng-model="user.firstName" class="form-control">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-6 col-sm-3">
-                    <h5>Email:</h5>
+                    <h5>Last Name</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Email">
+                    <input ng-model="user.lastName" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <h5>Roles</h5>
+                </div>
+                <div class="col-xs-18 col-sm-9">
+                    <input ng-model="user.roles" class="form-control">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-offset-6  col-sm-offset-3 col-xs-18 col-sm-9">
-                    <button type="button"> CONFIRM </button>
+                    <button ng-click="addUser(user)"> CONFIRM </button>
                 </div>
             </div>
 

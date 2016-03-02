@@ -6,7 +6,15 @@
         .module("FormBuilderApp")
         .controller("ProfileController",ProfileController);
 
-    function ProfileController($scope){
+    function ProfileController($scope,$rootScope,$location,UserService){
+
+        $scope.update = update
+
+        function update(user){
+            UserService.updateUser($rootScope.currentUser._id,user);
+            $location.url("/profile")
+        }
+
 
     }
 })();

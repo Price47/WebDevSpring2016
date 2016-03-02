@@ -1,9 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-
 <body>
 <div class="container-fluid">
             <h1 class="page-header">Login</h1>
@@ -13,7 +8,7 @@
                     <h5>Username:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Username">
+                    <input ng-model="user.username" class="form-control" placeholder="Username">
                 </div>
             </div>
             <div class="row">
@@ -21,18 +16,22 @@
                     <h5>Password:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input type="text" placeholder="Password">
+                    <input ng-model="user.password" class="form-control" placeholder="Password">
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-offset-6  col-sm-offset-3 col-xs-18 col-sm-9">
-                    <button type="button"> LOGIN </button>
+                    <button ng-click="login(user)" class="btn btn-primary"> LOGIN </button>
                 </div>
             </div>
 
 
+        <p>{{ count }}</p>
+
 
         </div>
+
+
 
 </body>
 </html>
