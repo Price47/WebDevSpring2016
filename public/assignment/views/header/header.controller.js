@@ -8,6 +8,11 @@
 
     function HeaderController($scope,$location,$rootScope,UserService){
 
+        $scope.logout = logout;
 
+        function logout(){
+            $rootScope.currentUser = null;
+            console.log("logout");
+        }
     }
 })();

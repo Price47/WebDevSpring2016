@@ -6,7 +6,7 @@
         .module("FormBuilderApp")
         .controller("FormFieldsController",FormFieldsController);
 
-        function FormFieldsController(){
+        function FormFieldsController($location,$scope,$rootScope,$FormService){
 
     }
 })();

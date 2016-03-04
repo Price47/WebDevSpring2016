@@ -95,7 +95,7 @@
 
         function createUser(user) {
             var newUser = {
-                id: createId(),
+                _id: createId(),
                 firstName: user.firstName,
                 lastName: user.lastName,
                 username: user.username,

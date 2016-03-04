@@ -13,7 +13,7 @@
         function login(user) {
             var loginUser = UserService.findUserByCredentials({username:user.username, password:user.password});
             if(loginUser){
-                UserService.setCurrentUser(user);
+                $rootScope.currentUser=user;
                 console.log("booyah")
             }
             else{
@@ -21,5 +21,7 @@
             }
 
         }
+
+
     }
 })();
