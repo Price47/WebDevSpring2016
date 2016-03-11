@@ -1,42 +1,73 @@
+
+
 body{
     background-color: whitesmoke;
+    padding-top: 75px;
 }
 
-h1{
-    background-color: mediumseagreen;
+
+.navbar{
+    background-color: firebrick;
+    height:60px;
+}
+
+.navbar-brand{
+    font-size: 15px;
+}
+
+.navbar-form{
+    padding:10px;
+}
+
+.nav-button{
+    background: transparent;
+    border: none !important;
+}
+
+#navbar > ul > li > a:link{
     color: whitesmoke;
-    border-style: groove;
-    border-color: seagreen;
-    text-align: center;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right:0px;
-    margin-bottom:5px;
-    padding: 10px;
-
+    background-color: firebrick;
 }
 
-a:link{
+#navbar > ul > li > a:hover{
+    color: whitesmoke !important;
+    background-color: firebrick;
+}
+
+#navbar > ul > li > a:active{
+    color:  whitesmoke !important;
+    background-color: firebrick;
+}
+
+#navbar > ul > li > a:visited{
+    color: #FAB6B6;
+    background-color: firebrick;
+}
+
+.navbar-title{
     float: left;
-    background-color: mediumseagreen;
-    border-style: outset;
-    text-decoration: none;
-    color: whitesmoke;
-    padding: 2px;
-    margin: 2px;
-    font-size:20px;
+    color: white;
+    font-family: "Marker Felt";
+    padding:20px;
 }
 
-a:visited{
-    color: whitesmoke;
+.wrapper {
+    background-color: transparent;
+    display:inline-block;
 }
 
-a:hover{
-    background-color: #22d15c;
+.login{
+    background-color: firebrick;
+    margin:150px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
 }
 
-a:active{
-    background-color: #22d15c;
-    border-style: inset;
+.login-fields{
 
+    margin-top: 20px;
 }
+
+
+

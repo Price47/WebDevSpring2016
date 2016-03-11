@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ProjectApp">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/project.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="views/home/home.controller.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ng-include src="'views/header/header.view.html'"></ng-include>
+
+<div class="container-fluid" style="padding-top: 60px">
+    <div ng-view></div>
+</div>
+
+
+</body>
+</html>
+
