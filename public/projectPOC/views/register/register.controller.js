@@ -7,7 +7,13 @@
         .module("ProjectApp")
         .controller("RegisterController", RegisterController);
 
-    function RegisterController(){
+    function RegisterController($location,$scope,$rootScope,UserService){
+        $scope.users = UserService.users;
 
+
+        $scope.newUser = function(user){
+            UserService.createUser(user);
+            $location.url("/home");
+        }
     }
 })();

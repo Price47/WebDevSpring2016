@@ -68,6 +68,26 @@ a:visited{
     background-color: firebrick;
 }
 
+.nav-login  > li > a:link{
+    color: whitesmoke;
+    background-color: firebrick;
+}
+
+.nav-login  > li > a:hover{
+    color: whitesmoke !important;
+    background-color: darkred !important;
+}
+
+.nav-login  > li > a:active{
+    color:  whitesmoke !important;
+    background-color: firebrick;
+}
+
+.nav-login  > li > a:visited{
+    color: #FAB6B6;
+    background-color: firebrick;
+}
+
 .navbar-title{
     float: left;
     color: white;
@@ -99,6 +119,10 @@ a:visited{
 
     padding-left:30px;
     padding-right:30px;
+    background-color: transparent;
+    border-style: none;
+    color: white;
+    font-family: "Marker Felt";
 }
 
 .nav-login li{
@@ -106,6 +130,17 @@ a:visited{
     width: 50%;
     height: auto;
     vertical-align: bottom;
+}
+
+.view-fields{
+
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.radio-text{
+    color: white;
+    font-family: "Marker Felt";
 }
 
 
