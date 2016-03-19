@@ -1,8 +1,32 @@
 
 
 body{
-    background-color: whitesmoke;
+    background-color: #FFC2C2;
     padding-top: 75px;
+}
+
+a:link{
+    color: whitesmoke;
+    background-color: firebrick;
+    text-decoration: none;
+}
+
+a:hover{
+    color: whitesmoke;
+    background-color: firebrick;
+    text-decoration: none;
+}
+
+a:active{
+    color:  whitesmoke;
+    background-color: firebrick;
+    text-decoration: none;
+}
+
+a:visited{
+    color: whitesmoke !important;
+    text-decoration: none !important;
+    background-color: firebrick;
 }
 
 
@@ -49,6 +73,7 @@ body{
     color: white;
     font-family: "Marker Felt";
     padding:20px;
+    background-color: transparent !important;
 }
 
 .wrapper {
@@ -58,16 +83,31 @@ body{
 
 .login{
     background-color: firebrick;
-    margin:150px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    border-radius:5px;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    border-radius:30px;
 }
 
 .login-fields{
 
     margin-top: 20px;
+
 }
+
+
+.login-link{
+
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.nav-login li{
+    display: table-cell;
+    width: 50%;
+    height: auto;
+    vertical-align: bottom;
+}
+
 
 
 

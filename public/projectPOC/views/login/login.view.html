@@ -4,17 +4,21 @@
 </head>
 <body>
 
-<div class="login container-fluid">
+<div class="login container-fluid col-sm-offset-3  col-sm-6">
 
-    <div align="center">
-    <input class="login-fields form-control" type="text" placeholder="username">
-    <br>
-    <input class="login-fields form-control" type="text" placeholder="password">
-    <br>
+    <div align="center" class="login-link">
+        <div class="row">
+            <input class="login-fields form-control" type="text" placeholder="Username">
+        </div>
+        <div class="row">
+            <input class="login-fields form-control" type="text" placeholder="Password">
+        </div>
     <button class="login-fields">Login</button>
     <hr>
-    <a href="#/login">Login</a>
-    <a href="#/register">Register</a>
+        <ul class="nav navbar-nav">
+            <li ng-class="{'active' : $location.url() == '/login'}"><a href="#/login">Login</a></li>
+            <li ng-class="{'active' : $location.url() == '/register'}"><a href="#/register">Register</a></li>
+        </ul>
     </div>
 
 </div>

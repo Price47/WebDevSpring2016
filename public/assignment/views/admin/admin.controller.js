@@ -22,6 +22,7 @@
         $scope.editUser = function(user){
             console.log("edit" + user);
             $rootScope.currentUser = user;
+            console.log($rootScope.currentUser.firstName);
             $location.url("/profile");
         }
 

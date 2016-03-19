@@ -32,6 +32,7 @@
             ],
 
             findUserByCredentials: findUserByCredentials,
+            findUserByUsername: findUserByUsername,
             findAllUsers: findAllUsers,
             createUser: createUser,
             findUserById: findUserById,
@@ -58,6 +59,13 @@
                 }
             }
             return null;
+        }
+
+        function findUserByUsername(username){
+            for(var u in model.users){
+                if(model.users[u].username=username)
+                return model.users[u];
+            }
         }
 
         function findUserById(userId) {

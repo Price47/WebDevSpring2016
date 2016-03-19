@@ -6,14 +6,14 @@
 
 <body>
 <div class="container-fluid">
-            <h1 class="page-header">Welcome {{currentUser.firstName}}!</h1>
+            <h1 class="page-header">Welcome {{$rootScope.currentUser.firstName}}!</h1>
 
             <div class="row">
                 <div class="col-xs-6 col-sm-3">
                     <h5>Username:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input ng-model="user.username" placeholder={{currentUser.username}}>
+                    <input ng-model="user.username" placeholder={{profileUser.username}}>
                 </div>
             </div>
             <div class="row">
@@ -21,7 +21,7 @@
                     <h5>Password:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input ng-model="user.password" placeholder={{currentUser.password}}>
+                    <input ng-model="user.password" placeholder={{profileUser.password}}>
                 </div>
             </div>
             <div class="row">
@@ -29,7 +29,7 @@
                     <h5>First Name:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input ng-model="user.firstName" placeholder={{currentUser.firstName}}>
+                    <input ng-model="user.firstName" placeholder={{profileUser.firstName}}>
                 </div>
             </div>
             <div class="row">
@@ -37,7 +37,7 @@
                     <h5>Last Name:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input ng-model="user.lastName" placeholder={{currentUser.lastName}}>
+                    <input ng-model="user.lastName" placeholder={{profileUser.lastName}}>
                 </div>
             </div>
             <div class="row">
@@ -45,7 +45,7 @@
                     <h5>Roles:</h5>
                 </div>
                 <div class="col-xs-18 col-sm-9">
-                    <input ng-model="user.roles" placeholder={{currentUser.roles}}>
+                    <input ng-model="user.roles" placeholder={{profileUser.roles}}>
                 </div>
             </div>
             <div class="row">

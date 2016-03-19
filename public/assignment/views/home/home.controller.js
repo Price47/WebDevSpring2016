@@ -7,7 +7,7 @@
         .controller("HomeController",HomeController);
 
     function HomeController($scope){
-        console.log("YO YO YO")
+
 
     }
 })();
