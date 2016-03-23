@@ -7,7 +7,9 @@
         .module("ProjectApp")
         .controller("ProfileController", ProfileController);
 
-    function ProfileController(){
+    function ProfileController($rootScope,$scope,$location,UserService){
+
+        $scope.profileUser = $rootScope.currentUser;
 
     }
 })();

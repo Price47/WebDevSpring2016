@@ -21,10 +21,12 @@
         </div>
         <form role="form">
             <div class="radio">
-                <label><input type="radio" aria-label="artist-radio" name="optregister"> Artist </label>
+                <label><input type="radio" aria-label="artist-radio" name="optregister"
+                              ng-model="user.role" value="Artist"> Artist </label>
             </div>
             <div class="radio">
-                <label><input type="radio" aria-label="enthusiast-radio" name="optregister">Art Enthusiast</label>
+                <label><input type="radio" aria-label="enthusiast-radio" name="optregister"
+                              ng-model="user.role" value="Enthusiast">Art Enthusiast</label>
             </div>
         </form>
         </div>

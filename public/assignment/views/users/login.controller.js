@@ -11,9 +11,9 @@
         $scope.login = login;
 
         function login(user) {
-            var loginUser = UserService.findUserByUsername(user.username);
+            var loginUser = UserService.findUserByCredentials(user);
             if(loginUser){
-                $rootScope.currentUser=user;
+                $rootScope.currentUser=loginUser;
                 console.log("booyah")
             }
             else{

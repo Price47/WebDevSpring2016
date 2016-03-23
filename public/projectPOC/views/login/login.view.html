@@ -8,12 +8,12 @@
 
     <div align="center" class="login-link">
         <div class="row">
-            <input class="login-fields form-control" type="text" placeholder="Username">
+            <input ng-model="user.username" class="login-fields form-control" type="text" placeholder="Username">
         </div>
         <div class="row">
-            <input class="login-fields form-control" type="text" placeholder="Password">
+            <input ng-model="user.password" class="login-fields form-control" type="text" placeholder="Password">
         </div>
-    <button class="login-link" style="margin-top: 15px">Login</button>
+    <button ng-click="login(user)" class="login-link" style="margin-top: 15px">Login</button>
     <hr>
     <div align="center" class="login-link">
         <ul class="nav navbar-nav nav-login">

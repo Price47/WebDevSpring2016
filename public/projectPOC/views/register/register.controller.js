@@ -14,6 +14,7 @@
         $scope.newUser = function(user){
             UserService.createUser(user);
             $location.url("/home");
+            console.log(user)
         }
     }
 })();

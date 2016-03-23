@@ -7,7 +7,18 @@
         .module("ProjectApp")
         .controller("HeaderController",HeaderController);
 
-    function HeaderController($rootScope, $location){
+    function HeaderController($rootScope,$scope, $location){
+        $scope.profile = profile;
+
+        function profile(){
+            if($rootScope.currentUser.role="admin"){
+                $location.url("/profile")
+            }
+            else{
+                $location.url("/profile")
+            }
+
+        }
 
         if($rootScope.currentUser){
             $rootScope.titleText = $rootScope.currentUser.username;

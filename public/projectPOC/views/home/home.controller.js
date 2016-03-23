@@ -9,11 +9,7 @@
 
 
         function HomeController($location, $scope, $rootScope, UserService){
-            $scope.users = UserService.users;
 
-            $scope.deleteUser = function(user){
-                UserService.deleteUserById(user)
-            }
         }
 
     }

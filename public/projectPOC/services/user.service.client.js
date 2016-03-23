@@ -11,7 +11,7 @@
             users: [
                 {
                     "_id": 111, "firstName": "Price", "lastName": "Stoeffel",
-                    "username": "price", "password": "price", role: "artist"
+                    "username": "price", "password": "price", role: "admin"
                 }
             ],
 
@@ -39,7 +39,9 @@
             for (var varUser in model.users) {
                 if (model.users[varUser].username === user.username &&
                     model.users[varUser].password === user.password) {
+                    console.log(model.users[varUser]);
                     return model.users[varUser];
+
                 }
             }
             return null;
@@ -92,7 +94,7 @@
                 lastName: user.lastName,
                 username: user.username,
                 password: user.password,
-                roles: user.roles
+                role: user.role
             };
             model.users.push(newUser);
             return user;

@@ -33,7 +33,7 @@
                 controller:"RegisterController"
             })
             .when("/profile",{
-                templateUrl: "views/users/profile.view.html",
+                templateUrl: "views/users/admin-profile.view.html",
                 controller: "ProfileController"
             })
             .otherwise({

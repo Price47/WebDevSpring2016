@@ -21,6 +21,10 @@
                 templateUrl: "views/profile/profile.view.html",
                 controller: "ProfileController"
             })
+            .when("/profile-admin",{
+                templateUrl: "views/admin-profile/admin-profile.view.html",
+                controller: "AdminProfileController"
+            })
             .when("/register",{
                 templateUrl: "views/register/register.view.html",
                 controller: "RegisterController"

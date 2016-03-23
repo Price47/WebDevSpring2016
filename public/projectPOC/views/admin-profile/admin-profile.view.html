@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="row">
+    <div class="login container-fluid  col-sm-4">
+
+        <div align="center" class="view-fields">
+            <div class="row">
+                <input ng-model="user.firstName" class="login-fields form-control"
+                       type="text" placeholder="{{profileUser.firstName}}">
+            </div>
+            <div class="row">
+                <input ng-model="user.lastName" class="login-fields form-control"
+                       type="text" placeholder="{{profileUser.lastName}}">
+            </div>
+            <div class="row">
+                <input ng-model="user.username" class="login-fields form-control"
+                       type="text" placeholder="{{profileUser.username}}">
+            </div>
+            <div class="row">
+                <input ng-model="user.password" class="login-fields form-control"
+                       type="text" placeholder="{{profileUser.password}}">
+            </div>
+            <form role="form">
+                <div class="radio">
+                    <label  class="radio-text"><input type="radio" aria-label="artist-radio" name="optregister"
+                    ng-model="user.role" value="Artist"> Artist </label>
+                </div>
+                <div class="radio">
+                    <label class="radio-text"><input type="radio" aria-label="enthusiast-radio" name="optregister"
+                    ng-model="user.role" value="Enthusiast">Art Enthusiast</label>
+                </div>
+            </form>
+        </div>
+        <div align="center">
+        <button class="login-link">Update</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="login container-fluid  col-sm-4" style="margin-top: 25px">
+
+        <table class="table table-striped table-responsive">
+            <thead>
+            <td></td>
+            <td>Username</a></td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            </thead>
+            <tbody>
+            <tr ng-repeat="user in users">
+                <td>
+                    <button ng-click="profileNavigate(user)" class="btn btn-default profile-link">
+                        <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                    </button>
+                </td>
+                <td>{{user.username}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>
+                    <button ng-click="deleteUser(user)" class="btn btn-default profile-link">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+
