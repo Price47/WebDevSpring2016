@@ -37,7 +37,7 @@
             </form>
         </div>
         <div align="center">
-        <button class="login-link">Update</button>
+        <button ng-click="updateUser(user)" class="login-link">Update</button>
         </div>
     </div>
 </div>
@@ -50,11 +50,12 @@
             <td>Username</a></td>
             <td>First Name</td>
             <td>Last Name</td>
+            <td></td>
             </thead>
             <tbody>
             <tr ng-repeat="user in users">
                 <td>
-                    <button ng-click="profileNavigate(user)" class="btn btn-default profile-link">
+                    <button ng-click="profileUpdate(user)" class="btn btn-default profile-link">
                         <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
                     </button>
                 </td>

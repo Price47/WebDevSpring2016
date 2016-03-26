@@ -23,7 +23,8 @@
             deleteUserById: deleteUserById,
             updateUser: updateUser,
             setCurrentUser: setCurrentUser,
-            getCurrentUser: getCurrentUser
+            getCurrentUser: getCurrentUser,
+            fillInUser: fillInUser
         };
         return model;
 
@@ -39,7 +40,6 @@
             for (var varUser in model.users) {
                 if (model.users[varUser].username === user.username &&
                     model.users[varUser].password === user.password) {
-                    console.log(model.users[varUser]);
                     return model.users[varUser];
 
                 }
@@ -72,30 +72,17 @@
             }
         }
 
-        function createId(){
-            var i = 1;
-            var newId = null;
-            while (newId = null) {
-                var id = UserService.findUserById(i);
-                if (id = null) {
-                    newId = i;
-                    return newId;
-                }
-                else {
-                    i++;
-                }
-            }
-        }
 
         function createUser(user) {
             var newUser = {
-                _id: createId(),
+                _id:  model.users[model.users.length-1]._id + 1,
                 firstName: user.firstName,
                 lastName: user.lastName,
                 username: user.username,
                 password: user.password,
                 role: user.role
             };
+            console.log(newUser._id);
             model.users.push(newUser);
             return user;
         }
@@ -107,6 +94,27 @@
                     model.users.splice(varUser, 1)
                 }
             }
+        }
+
+        function fillInUser(user,userInfo){
+            if(!user.firstName){
+                user.firstName = userInfo.firstName;
+            }
+            if(!user.lastName){
+                user.lastName = userInfo.lastName;
+            }
+            if(!user.username){
+                user.username=userInfo.username;
+            }
+            if(!user.password){
+                user.password=userInfo.password;
+            }
+            if(!user.role){
+                user.role=userInfo.role;
+            }
+
+            return user;
+
         }
 
         function updateUser(userId,currentUser) {

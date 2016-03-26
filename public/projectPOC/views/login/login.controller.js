@@ -17,7 +17,7 @@
             console.log(loginUser);
             console.log($rootScope.currentUser);
             if($rootScope.currentUser.role="admin"){
-                $location.url("/profile")
+                $location.url("/profile-admin")
             }
            else{
                 $location.url("/profile")

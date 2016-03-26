@@ -19,7 +19,7 @@ a:hover{
 
 a:active{
     color:  whitesmoke;
-    background-color: firebrick;
+    background-color: darkred;
     text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ a:visited{
 
 #navbar > ul > li > a:active{
     color:  whitesmoke !important;
-    background-color: firebrick;
+    background-color: darkred !important;
 }
 
 #navbar > ul > li > a:visited{

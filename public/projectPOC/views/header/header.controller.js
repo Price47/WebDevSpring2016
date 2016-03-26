@@ -11,8 +11,12 @@
         $scope.profile = profile;
 
         function profile(){
-            if($rootScope.currentUser.role="admin"){
-                $location.url("/profile")
+            if(!$rootScope.currentUser){
+                $location.url("/login");
+                console.log("thi")
+            }
+            else if($rootScope.currentUser.role="admin"){
+                $location.url("/profile-admin")
             }
             else{
                 $location.url("/profile")

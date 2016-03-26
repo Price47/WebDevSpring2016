@@ -11,24 +11,22 @@
         $scope.users = UserService.users;
         $scope.profileUser = $rootScope.currentUser;
         $scope.deleteUser = deleteUser;
-        $scope.profileNavigate = profileNavigate;
+        $scope.profileUpdate = profileUpdate;
+        $scope.updateUser = updateUser;
 
         function deleteUser(user){
             UserService.deleteUserById(user)
         }
 
-        function profileNavigate(user){
-            var newUser = UserService.findUserByCredentials(user);
-            if(newUser){
-                if(newUser.role = "admin") {
-                    $location.url("#/profile-admin")
-                }
-                else{
-                    $location.url("#/profile")
-                }
-            }
-            else{
-                console.log("No user found")
+        function profileUpdate(user){
+            $scope.profileUser = UserService.findUserByCredentials(user);
+        }
+
+        function updateUser(user){
+            var fillUser = UserService.fillInUser($scope.profileUser,user);
+            var updateUser = UserService.findUserByCredentials(fillUser);
+            if(updateUser){
+                UserService.updateUser(updateUser._id,fillUser);
             }
         }
     }

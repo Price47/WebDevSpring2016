@@ -7,30 +7,40 @@
 <body>
 <div class="login container-fluid  col-sm-4">
 
+    <h1> {{$rootScope.currentUser.firstName}}</h1>
+
     <div align="center" class="view-fields">
         <div class="row">
-            <input class="login-fields form-control" type="text" placeholder="{{profileUser.firstName}}">
+            <input ng-model="user.firstName" class="login-fields form-control"
+                   type="text" placeholder="{{profileUser.firstName}}">
         </div>
         <div class="row">
-            <input class="login-fields form-control" type="text" placeholder="{{profileUser.lastName}}">
+            <input ng-model="user.lastName" class="login-fields form-control"
+                   type="text" placeholder="{{profileUser.lastName}}">
         </div>
         <div class="row">
-            <input class="login-fields form-control" type="text" placeholder="{{profileUser.username}}">
+            <input ng-model="user.username" class="login-fields form-control"
+                   type="text" placeholder="{{profileUser.username}}">
         </div>
         <div class="row">
-            <input class="login-fields form-control" type="text" placeholder="{{profileUser.password}}">
+            <input ng-model="user.password" class="login-fields form-control"
+                   type="text" placeholder="{{profileUser.password}}">
         </div>
         <form role="form">
             <div class="radio">
-                <label  class="radio-text"><input type="radio" aria-label="artist-radio" name="optregister"> Artist </label>
+                <label class="radio-text">
+                    <input ng-model="user.role" type="radio" aria-label="artist-radio"
+                           value="Artist" name="optregister"> Artist </label>
             </div>
             <div class="radio">
-                <label class="radio-text"><input type="radio" aria-label="enthusiast-radio" name="optregister">Art Enthusiast</label>
+                <label class="radio-text">
+                    <input ng-model="user.role" type="radio" aria-label="enthusiast-radio"
+                           value="Enthusiast" name="optregister">Art Enthusiast</label>
             </div>
         </form>
     </div>
     <div align="center">
-    <button class="login-link">Update</button>
+    <button ng-click="update(user)" class="login-link">Update</button>
     </div>
 
 </div>
