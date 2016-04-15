@@ -23,12 +23,18 @@
                 .success(callback);
         }
 
-        function createUser(){}
+        function createUser(user,callback){
+            $http.post("/rest/user",user)
+                .success(callback);
+        }
         function readUser(id, callback){
             $http.get("/rest/user/" + id)
                 .success(callback);
         }
-        function updateUserByIndex(){}
+        function updateUserByIndex(id,user,callback){
+            $http.put("/rest/user/"+id, user)
+                .success(callback)
+        }
         function deleteUserByIndex(id,callback){
             $http.delete("/rest/user/" + id)
                 .success(callback);
