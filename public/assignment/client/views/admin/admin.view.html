@@ -54,7 +54,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="user in users">
+                    <tr ng-class="{'success':$index == selectedUserIndex}"
+                        ng-click="selectUser($index)"
+                        ng-repeat="user in users">
                         <td>{{user.firstName}}</td>
                         <td>{{user.password}}</td>
                         <td>{{user.roles}}</td>
@@ -62,13 +64,14 @@
                             <button ng-click="editUser(user)" class="btn btn-default">
                                 <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                             </button>
-                            <button ng-click="deleteUser(user)" class="btn btn-default">
+                            <button ng-click="deleteUser($index)" class="btn btn-default">
                                 <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                             </button>
                         </td>
                     </tr>
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>

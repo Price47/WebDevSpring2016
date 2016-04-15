@@ -6,14 +6,10 @@
         .module("FormBuilderApp")
         .factory("FormService",FormService)
 
-    function FormService($rootScope){
+    function FormService($rootScope, $http){
         var model = {
-            forms: [
-            {"_id": "000", "title": "Contacts", "userId": 123},
-            {"_id": "010", "title": "ToDo",     "userId": 123},
-            {"_id": "020", "title": "CDs",      "userId": 234}
-            ],
 
+            readAllForms: readAllForms,
             createFormForUser: createFormForUser,
             findAllFormsForUser: findAllFormsForUser,
             getFormId: getFormId,
@@ -25,6 +21,10 @@
         };
         return model;
 
+        function readAllForms(callback){
+            $http.get("/rest/form")
+                .success(callback);
+        }
         function setCurrentForm(form){
             $rootScope.currentForm = form;
         }
