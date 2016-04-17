@@ -15,6 +15,10 @@
 
         $scope.selectUser = selectUser;
         $scope.deleteUser = deleteUser;
+        $scope.addUser = addUser;
+        $scope.updateUser = updateUser;
+
+
 
         function renderUsers(response){
             $scope.users = response
@@ -29,12 +33,18 @@
             })
         }
 
-
         function deleteUser(index)
         {
             UserService.deleteUserByIndex(index,renderUsers)
         }
 
+        function addUser(user){
+            UserService.createUser(user,renderUsers)
+        }
+
+        function updateUser(user){
+            UserService.updateUserByIndex($scope.selectedUserIndex,user,renderUsers)
+        }
 
 
 

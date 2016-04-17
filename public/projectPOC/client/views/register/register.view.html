@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+<div class="login container-fluid col-sm-offset-3 col-sm-6">
+
+    <div align="center" class="login-link">
+        <div class="row">
+             <input ng-model="user.firstName" class="login-fields form-control"  placeholder="First Name">
+        </div>
+        <div class="row">
+            <input ng-model="user.lastName" class="login-fields form-control"  placeholder="Last Name">
+        </div>
+        <div class="row">
+            <input ng-model="user.username" class="login-fields form-control"  placeholder="Username">
+        </div>
+        <div class="row">
+            <input ng-model="user.password" class="login-fields form-control" placeholder="Password">
+        </div>
+        <form role="form">
+            <div class="radio">
+                <label><input type="radio" aria-label="artist-radio" name="optregister"
+                              ng-model="user.role" value="Artist"> Artist </label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" aria-label="enthusiast-radio" name="optregister"
+                              ng-model="user.role" value="Enthusiast">Art Enthusiast</label>
+            </div>
+        </form>
+        </div>
+    <div align="center">
+        <button ng-click="createUser(user)" class="login-fields login-link">Register</button>
+    </div>
+    <hr>
+    <div class="login-link" align="center">
+        <ul class="nav navbar-nav nav-login">
+            <li ng-class="{'active' : $location.url() == '/login'}"><a href="#/login">Login</a></li>
+            <li ng-class="{'active' : $location.url() == '/register'}"><a href="#/register">Register</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</body>
+</html>

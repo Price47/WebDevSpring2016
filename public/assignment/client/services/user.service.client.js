@@ -13,7 +13,8 @@
             readAllUsers: readAllUsers,
             readUser: readUser,
             updateUserByIndex: updateUserByIndex,
-            deleteUserByIndex: deleteUserByIndex
+            deleteUserByIndex: deleteUserByIndex,
+
 
         };
         return service;
@@ -39,6 +40,9 @@
             $http.delete("/rest/user/" + id)
                 .success(callback);
         }
+
+
+
 
 
 

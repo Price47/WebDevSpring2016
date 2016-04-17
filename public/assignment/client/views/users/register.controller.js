@@ -6,14 +6,13 @@
         .module("FormBuilderApp")
         .controller("RegisterController",RegisterController);
 
-    function RegisterController($location,$scope, UserService) {
+    function RegisterController($location,$scope,$http, UserService) {
 
+        $scope.addUser = addUser;
 
-        $scope.addUser = function (user) {
-            UserService.createUser(user);
-            UserService.setCurrentUser(user);
-            $location.url("/profile");
-            console.log(user);
+        function addUser(user){
+            $http.post("/rest/user",user)
+                .success($location.url("/profile"));
         }
     }
 })();
