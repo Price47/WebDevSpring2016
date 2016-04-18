@@ -5,7 +5,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-fixed-top">
+<nav    ng-controller="HeaderController"
+        class="navbar navbar-fixed-top">
     <div class="container-fluid">
 
     <div class="row">
@@ -25,11 +26,16 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li ng-class="{'active' : $location.url() == '/login'}"><a href="#/login">Login</a></li>
-                <li
+                <li     ng-hide="currentUser"
+                        ng-class="{'active' : $location.url() == '/login'}">
+                    <a href="#/login">Login</a></li>
+                <li     ng-hide="!currentUser"
+                        ng-click="logout()">
+                    <a href="#/home">Logout</a></li>
+                <li     ng-hide="!currentUser"
                         ng-class="{'active' : $location.url() == '/profile'}">
                     <a href="#/profile">Profile</a></li>
-                <li
+                <li     ng-show="currentUser.role[0]=='admin'"
                         ng-class="{'active' : $location.url() == '/profile-admin'}">
                     <a href="#/profile-admin">Admin</a>
                 </li>

@@ -13,10 +13,23 @@
 
 
         function createUser(user){
-            UserService.createUser(user,function(response){
-                $scope.users=response;
-            });
-            $location.url("/profile-admin");
+            UserService.createUser(user)
+                .then(
+                    function(user){
+                        UserService.login(user.username,user.password)
+                            .then(
+                                function(user){
+                                    $location.url("/profile")
+                                },
+                            function(err){
+                                res.status(400).send(err);
+                            })
+                    }
+                );
+            $location.url("/home");
+
         }
+
+
     }
 })();

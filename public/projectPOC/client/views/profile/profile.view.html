@@ -7,23 +7,23 @@
 <body>
 <div class="login container-fluid  col-sm-4">
 
-    <h1> {{$rootScope.currentUser.firstName}}</h1>
+
 
     <div align="center" class="view-fields">
         <div class="row">
-            <input ng-model="user.firstName" class="login-fields form-control"
-                   type="text" placeholder="{{profileUser.firstName}}">
+            <input ng-model="profileUser.firstName" class="login-fields form-control"
+                   type="text" >
         </div>
         <div class="row">
-            <input ng-model="user.lastName" class="login-fields form-control"
+            <input ng-model="profileUser.lastName" class="login-fields form-control"
                    type="text" placeholder="{{profileUser.lastName}}">
         </div>
         <div class="row">
-            <input ng-model="user.username" class="login-fields form-control"
+            <input ng-model="profileUser.username" class="login-fields form-control"
                    type="text" placeholder="{{profileUser.username}}">
         </div>
         <div class="row">
-            <input ng-model="user.password" class="login-fields form-control"
+            <input ng-model="profileUser.password" class="login-fields form-control"
                    type="text" placeholder="{{profileUser.password}}">
         </div>
         <form role="form">
@@ -40,7 +40,7 @@
         </form>
     </div>
     <div align="center">
-    <button ng-click="update(user)" class="login-link">Update</button>
+    <button ng-click="update(profileUser)" class="login-link">Update</button>
     </div>
 
 </div>

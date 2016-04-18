@@ -7,40 +7,55 @@
         .factory("UserService",UserService);
 
     function UserService($rootScope, $http) {
-        var service = {
+        var api = {
 
+            setCurrentUser: setCurrentUser,
+            getCurrentUser: getCurrentUser,
+            login: login,
             createUser: createUser,
             readUserById: readUserById,
             readUsers: readUsers,
             updateUser: updateUser,
-            deleteUserById: deleteUserById
+            deleteUserById: deleteUserById,
         };
-        return service;
+        return api;
 
-        function createUser(user,callback){
-            $http.post("/rest/user",user)
-                .success(callback);
+        function createUser(user){
+            return $http.post("/api/user",user)
         }
 
-        function readUsers(callback){
-            $http.get("/rest/user")
-                .success(callback);
+        function readUsers(){
+            return $http.get("/api/user")
         }
 
+
+        function login(username,password){
+            return $http.post("/api/login/" + username + "/" + password )
+        }
         function readUserById(id,callback){
             $http.get("/rest/user/" + id)
                 .success(callback);
         }
 
-        function updateUser(id,user,callback){
-            $http.put("/rest/user/" + id, user)
+        function updateUser(user){
+            return $http.put("/api/user/" + user._id, user)
+        }
+
+        function deleteUserById(id){
+            return $http.delete("/api/user/" + id)
+        }
+
+        function setCurrentUser(user,callback){
+            $http.post("/rest/user/current",user)
+                .success(callback)
+        }
+
+        function getCurrentUser(callback){
+            $http.get("/rest/user/current")
                 .success(callback);
         }
 
-        function deleteUserById(id,callback){
-            $http.delete("/rest/user/" + id)
-                .success(callback)
-        }
+
     }
 
 

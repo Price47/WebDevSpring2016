@@ -9,15 +9,26 @@
 
     function LoginController($scope, $rootScope, $location, UserService){
 
-        $scope.login=login;
 
-       function login(user){
-            UserService.loginUser(user.username,user.password,function(response){
-                $scope.user = response;
-                $rootScope.user = response;
-                console.log($rootScope.user)
-            }
-            )
+        $scope.login = login;
+
+       function login(user) {
+        if(user){
+            UserService.login(user.username,user.password)
+                .then(
+                    function(response){
+                        $rootScope.currentUser = response.data;
+                        $location.url("/home")
+                    },
+                    function(err){
+                        $scope.error = err;
+                        $scope.errorMessage = "Incorrect Login info"
+                    }
+                )
         }
+
+       }
     }
+
+
 })();
