@@ -9,6 +9,7 @@
 
     function HeaderController($rootScope,$scope, $location){
         $scope.profile = profile;
+        $isAdmin = isAdmin;
 
         function profile(){
             if(!$rootScope.currentUser){
@@ -20,6 +21,17 @@
             }
             else{
                 $location.url("/profile")
+            }
+
+        }
+
+        function isAdmin(){
+            if($rootScope.user){
+                if($rootScope.user.role == "admin"){
+                    return true;
+                }
+            }else{
+                return false;
             }
 
         }

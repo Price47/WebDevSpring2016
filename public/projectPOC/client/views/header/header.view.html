@@ -26,7 +26,13 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li ng-class="{'active' : $location.url() == '/login'}"><a href="#/login">Login</a></li>
-                <li ng-class="{'active' : $location.url() == '/profile-admin'}"><a href="#/profile-admin">Profile</a></li>
+                <li
+                        ng-class="{'active' : $location.url() == '/profile'}">
+                    <a href="#/profile">Profile</a></li>
+                <li
+                        ng-class="{'active' : $location.url() == '/profile-admin'}">
+                    <a href="#/profile-admin">Admin</a>
+                </li>
             </ul>
         </div>
     </div>

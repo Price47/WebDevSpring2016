@@ -8,8 +8,20 @@
             .controller("HomeController",HomeController);
 
 
-        function HomeController($location, $scope, $rootScope, UserService){
+        function HomeController($location, $scope, $rootScope,$http, UserService){
+            $scope.setAdmin = setAdmin;
+            $scope.setProfile = setProfile;
 
+
+            function setAdmin(){
+                $rootScope.user = 2;
+                console.log($rootScope.user)
+            }
+
+            function setProfile(){
+                $rootScope.user = 1;
+                console.log($rootScope.user);
+            }
         }
 
     }

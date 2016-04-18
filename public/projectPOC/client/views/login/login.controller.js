@@ -12,16 +12,12 @@
         $scope.login=login;
 
        function login(user){
-            var loginUser = UserService.findUserByCredentials(user);
-            $rootScope.currentUser = loginUser;
-            console.log(loginUser);
-            console.log($rootScope.currentUser);
-            if($rootScope.currentUser.role="admin"){
-                $location.url("/profile-admin")
+            UserService.loginUser(user.username,user.password,function(response){
+                $scope.user = response;
+                $rootScope.user = response;
+                console.log($rootScope.user)
             }
-           else{
-                $location.url("/profile")
-            }
+            )
         }
     }
 })();
