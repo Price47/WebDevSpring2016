@@ -15,7 +15,8 @@
         };
         return api;
 
-        function createComment() {
+        function createComment(comment) {
+            return $http.post("/api/comment",comment)
         }
 
         function readCommentById() {
@@ -24,7 +25,8 @@
         function updateComment() {
         }
 
-        function deleteCommentById() {
+        function deleteCommentById(id) {
+            return $http.delete("/api/comment/" + id)
         }
 
         function readComments(){

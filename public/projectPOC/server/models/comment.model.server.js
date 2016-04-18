@@ -12,7 +12,8 @@ module.exports = function(){
         deleteComment: deleteComment,
         createComment: createComment,
         updateComment: updateComment,
-        findComments: findComments
+        findComments: findComments,
+        deleteCommentById: deleteCommentById
     };return api;
 
     function findComments(){
@@ -25,8 +26,8 @@ module.exports = function(){
     function findAllCommentsByUser(user){
         return CommentModel.find({username:user.username});
     }
-    function updateComment(id,comment){
-        return CommentModel.update({_id:id},{$set:comment})
+    function updateComment(id,message){
+        return CommentModel.update({_id:id},{$set:message})
     }
     function deleteComment(id){
         return CommentModel.remove({_id:id})
@@ -34,6 +35,10 @@ module.exports = function(){
 
     function createComment(comment){
         return CommentModel.create(comment)
+    }
+
+    function deleteCommentById(id){
+        return CommentModel.remove({_id:id})
     }
 
 
