@@ -8,5 +8,10 @@
 
 <a href="#/detail">detail</a>
 
+<ul>
+    <li ng-repeat="photo in photos"
+        ng-click="detailView($index)">{{photo.picture}}</li>
+</ul>
+
 </body>
 </html>

@@ -8,6 +8,7 @@ module.exports = function(){
     var api = {
 
         findCommentById:findCommentById,
+        findCommentByPictureId:findCommentByPictureId,
         findAllCommentsByUser: findAllCommentsByUser,
         deleteComment: deleteComment,
         createComment: createComment,
@@ -22,6 +23,9 @@ module.exports = function(){
 
     function findCommentById(id){
         return CommentModel.findById(id)
+    }
+    function findCommentByPictureId(pictureId){
+        return CommentModel.find({pictureId:pictureId})
     }
     function findAllCommentsByUser(user){
         return CommentModel.find({username:user.username});

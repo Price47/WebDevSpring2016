@@ -5,28 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-<div class="login container-fluid  col-sm-4">
-
-
-
+<h1>{{currentUser.username}}'s Profile</h1>
+<div class="login container-fluid  col-sm-12">
     <div align="center" class="view-fields">
-        <div class="row">
+        <div class="col-sm-3">
             <input ng-model="profileUser.firstName" class="login-fields form-control"
                    type="text" placeholder="First Name">
         </div>
-        <div class="row">
+        <div class="col-sm-3">
             <input ng-model="profileUser.lastName" class="login-fields form-control"
                    type="text" placeholder="Last Name">
         </div>
-        <div class="row">
+        <div class="col-sm-3">
             <input ng-model="profileUser.username" class="login-fields form-control"
                    type="text" placeholder="Username">
         </div>
-        <div class="row">
+        <div class="col-sm-3">
             <input ng-model="profileUser.password" class="login-fields form-control"
                    type="text" placeholder="Password">
         </div>
-        <form role="form">
+        <form role="form" style="float:left">
             <div class="radio">
                 <label class="radio-text">
                     <input ng-model="user.role" type="radio" aria-label="artist-radio"
@@ -39,11 +37,14 @@
             </div>
         </form>
     </div>
-    <div align="center">
-    <button ng-click="update(profileUser)" class="login-link">Update</button>
+    <div style="float:right;margin-top:20px;margin-right:40px">
+        <button ng-click="update(profileUser)" class="login-link">Update</button>
     </div>
 
 </div>
+<input type = "file" file-model = "myFile"/>
+<button ng-click = "uploadFile()">upload me</button>
+
 
 </body>
 </html>

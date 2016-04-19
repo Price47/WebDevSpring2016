@@ -1,37 +1,37 @@
 
 
 body{
-    background-color: #FFC2C2;
+    background-color: #555555;
     padding-top: 75px;
 }
 
 a:link{
     color: whitesmoke;
-    background-color: firebrick;
+    background-color: #555555;
     text-decoration: none;
 }
 
 a:hover{
     color: whitesmoke;
-    background-color: firebrick;
+    background-color: #555555;
     text-decoration: none;
 }
 
 a:active{
     color:  whitesmoke;
-    background-color: darkred;
+    background-color: #555555;
     text-decoration: none;
 }
 
 a:visited{
     color: whitesmoke !important;
     text-decoration: none !important;
-    background-color: firebrick;
+    background-color: #555555;
 }
 
 
 .navbar{
-    background-color: firebrick;
+    background-color: #428bca;
     height:60px;
 }
 
@@ -50,42 +50,42 @@ a:visited{
 
 #navbar > ul > li > a:link{
     color: whitesmoke;
-    background-color: firebrick;
+    background-color: #555555;
 }
 
 #navbar > ul > li > a:hover{
     color: whitesmoke !important;
-    background-color: firebrick;
+    background-color: #555555;
 }
 
 #navbar > ul > li > a:active{
     color:  whitesmoke !important;
-    background-color: darkred !important;
+    background-color: #555555 !important;
 }
 
 #navbar > ul > li > a:visited{
     color: #FAB6B6;
-    background-color: firebrick;
+    background-color: #555555;
 }
 
 .nav-login  > li > a:link{
     color: whitesmoke;
-    background-color: firebrick;
+    background-color: #428bca;
 }
 
 .nav-login  > li > a:hover{
     color: whitesmoke !important;
-    background-color: darkred !important;
+    background-color: #555555 !important;
 }
 
 .nav-login  > li > a:active{
     color:  whitesmoke !important;
-    background-color: firebrick;
+    background-color: #555555;
 }
 
 .nav-login  > li > a:visited{
     color: #FAB6B6;
-    background-color: firebrick;
+    background-color: #428bca;
 }
 
 .navbar-title{
@@ -102,7 +102,7 @@ a:visited{
 }
 
 .login{
-    background-color: firebrick;
+    background-color: #428bca;
     -webkit-border-radius:30px;
     -moz-border-radius:30px;
     border-radius:30px;
@@ -116,11 +116,13 @@ a:visited{
 
 
 .login-link{
-
     padding-left:30px;
     padding-right:30px;
-    background-color: transparent;
+    background-color: #428bca;
     border-style: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
     color: white;
     font-family: "Marker Felt";
 }

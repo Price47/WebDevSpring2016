@@ -14,6 +14,7 @@
             login: login,
             createUser: createUser,
             readUserById: readUserById,
+            readUserByUsername: readUserByUsername,
             readUsers: readUsers,
             updateUser: updateUser,
             deleteUserById: deleteUserById,
@@ -26,6 +27,10 @@
 
         function readUsers(){
             return $http.get("/api/user")
+        }
+
+        function readUserByUsername(username){
+            return $http.get("/api/user/" + username )
         }
 
 

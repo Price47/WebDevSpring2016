@@ -5,24 +5,32 @@
 
         angular
             .module("ProjectApp")
-            .controller("HomeController",HomeController);
+            .controller("HomeController", HomeController);
 
 
-        function HomeController($location, $scope, $rootScope,$http, UserService){
-            $scope.setAdmin = setAdmin;
-            $scope.setProfile = setProfile;
+        function HomeController($location, $scope, $rootScope, $http, PhotoService, UserService) {
 
+            $scope.detailView = detailView;
 
-            function setAdmin(){
-                $rootScope.user = 2;
-                console.log($rootScope.user)
+            function init() {
+                PhotoService.readPhotos()
+                    .then(handleSuccess, handleError);
+
+            }init();
+
+            function handleSuccess(response){
+                $scope.photos = response.data;
             }
 
-            function setProfile(){
-                $rootScope.user = 1;
-                console.log($rootScope.user);
+            function handleError(err){
+                $scope.error = err;
+            }
+
+            function detailView(index){
+                $rootScope.photoIndex = index;
+                $location.url("/detail")
             }
         }
-
     }
+
 )();

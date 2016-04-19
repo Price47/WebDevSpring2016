@@ -7,10 +7,17 @@
         .module("ProjectApp")
         .controller("ProfileController", ProfileController);
 
-    function ProfileController($rootScope,$scope,$location,UserService){
+    function ProfileController($rootScope,$scope,$http,UserService,PhotoService){
 
         $scope.profileUser = $rootScope.currentUser;
         $scope.update = update;
+        $scope.uploadFile = uploadFile;
+
+        function uploadFile(){
+            var file = $scope.myFile;
+            $http.post("/upload",file)
+        }
+
 
 
         function update(user){

@@ -7,11 +7,14 @@
         .module("ProjectApp")
         .controller("HeaderController",HeaderController);
 
-    function HeaderController($rootScope,$scope, $location){
+    function HeaderController($rootScope,$scope, $location, UserService){
 
         $scope.logout = logout;
+        $scope.searchUser = searchUser;
 
-
+        function searchUser(){
+            UserService.readUserByUsername($scope.user)
+        }
 
         function logout(){
             $rootScope.currentUser = null

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="login container-fluid  col-sm-4">
+
+
+
+    <div align="center" class="view-fields">
+        <div class="row">
+            <input ng-model="profileUser.firstName" class="login-fields form-control"
+                   type="text" placeholder="First Name">
+        </div>
+        <div class="row">
+            <input ng-model="profileUser.lastName" class="login-fields form-control"
+                   type="text" placeholder="Last Name">
+        </div>
+        <div class="row">
+            <input ng-model="profileUser.username" class="login-fields form-control"
+                   type="text" placeholder="Username">
+        </div>
+        <div class="row">
+            <input ng-model="profileUser.password" class="login-fields form-control"
+                   type="text" placeholder="Password">
+        </div>
+        <form role="form">
+            <div class="radio">
+                <label class="radio-text">
+                    <input ng-model="user.role" type="radio" aria-label="artist-radio"
+                           value="Artist" name="optregister"> Artist </label>
+            </div>
+            <div class="radio">
+                <label class="radio-text">
+                    <input ng-model="user.role" type="radio" aria-label="enthusiast-radio"
+                           value="Enthusiast" name="optregister">Art Enthusiast</label>
+            </div>
+        </form>
+    </div>
+    <div align="center">
+    <button ng-click="update(profileUser)" class="login-link">Update</button>
+    </div>
+
+</div>
+
+</body>
+</html>

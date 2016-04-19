@@ -9,6 +9,7 @@
 
             createComment: createComment,
             readCommentById: readCommentById,
+            readCommentByPictureId: readCommentByPictureId,
             updateComment: updateComment,
             deleteCommentById: deleteCommentById,
             readComments: readComments
@@ -20,6 +21,10 @@
         }
 
         function readCommentById() {
+        }
+
+        function readCommentByPictureId(pictureId){
+            return $http.get("/api/comment/picture/" + pictureId)
         }
 
         function updateComment() {

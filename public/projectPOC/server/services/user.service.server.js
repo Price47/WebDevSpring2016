@@ -13,6 +13,7 @@ module.exports = function(app,userModel){
     app.post("/api/user",createUser);
     app.delete("/api/user/:id",deleteUserById);
     app.put("/api/user/:id",updateUser);
+    app.get("/api/user/:username",findUserByUsername);
 
 
     function authorized (req, res, next) {
@@ -40,6 +41,20 @@ module.exports = function(app,userModel){
                 })
 
         }
+
+    function findUserByUsername(req,res){
+        var username = req.params["username"]
+
+        return userModel.findUserByUsername(username)
+            .then(
+                function(user){
+                    res.json(user)
+                },
+                function(err){
+                    res.status(400).send(err)
+                }
+            )
+    }
 
     function createUser(req,res){
         var user = req.body;
