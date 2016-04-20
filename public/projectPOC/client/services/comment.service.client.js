@@ -6,7 +6,7 @@
     function CommentService($rootScope, $http) {
         var api = {
 
-
+            createCommentByPictureId:createCommentByPictureId,
             createComment: createComment,
             readCommentById: readCommentById,
             readCommentByPictureId: readCommentByPictureId,
@@ -18,6 +18,10 @@
 
         function createComment(comment) {
             return $http.post("/api/comment",comment)
+        }
+
+        function createCommentByPictureId(comment,pictureId) {
+            return $http.post("/api/comment/" + pictureId,comment)
         }
 
         function readCommentById() {

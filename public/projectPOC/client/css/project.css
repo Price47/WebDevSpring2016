@@ -106,6 +106,7 @@ a:visited{
     -webkit-border-radius:30px;
     -moz-border-radius:30px;
     border-radius:30px;
+    padding-bottom: 20px;
 }
 
 .login-fields{
@@ -149,4 +150,8 @@ a:visited{
     border-style: none;
 }
 
+.edit-roles{
+    float:right;
+    margin-right: 40px;
+}
 

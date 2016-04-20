@@ -4,19 +4,23 @@
 </head>
 <body>
 
-<div class="row col-sm-offset-2 col-sm-8" style="background-color: whitesmoke">
-    <div class="col-sm-1">
-        <button ng-click="previous()"
+<div class="row col-sm-offset-2 col-sm-8">
+    <div>
+        <button ng-class="col-sm-1"
+                ng-click="previous()"
                 class="glyphicon glyphicon-chevron-left"></button>
     </div>
-    <div class="col-sm-10" align="center">
-        <img src={{$scope.photos[$rootScope.photoIndex].picture}} style="width:300px;height:320px;">
-    </div>
-    <div class="col-sm-1">
+    <div class="col-sm-offset-10 col-sm-1">
         <button ng-click="next()"
                 class="glyphicon glyphicon-chevron-right"></button>
     </div>
+    <div class="row col-sm-12">
+        <div align="center">
+            <img src={{photos[photoIndex].picture}} style="width:100%;height:100%;">
+        </div>
+    </div>
 </div>
+
 <div class="login container-fluid col-sm-offset-2  col-sm-8" style="background-color: whitesmoke">
 <table class="table-responsive table-striped" style="width: 100%">
     <thead>

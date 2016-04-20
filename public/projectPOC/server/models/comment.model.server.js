@@ -14,11 +14,16 @@ module.exports = function(){
         createComment: createComment,
         updateComment: updateComment,
         findComments: findComments,
+        findCommentsByPicture:findCommentsByPicture,
         deleteCommentById: deleteCommentById
     };return api;
 
     function findComments(){
         return CommentModel.find();
+    }
+
+    function findCommentsByPicture(id){
+        return CommentModel.find({pictureId:id})
     }
 
     function findCommentById(id){

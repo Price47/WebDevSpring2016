@@ -4,6 +4,7 @@ module.exports = function(app,commentModel){
 
     app.get("/api/comment",findComments);
     app.post("/api/comment",createComment);
+    app.post("/api/comment/:pictureId",createCommentByPicture);
     app.delete("/api/comment/:id",deleteCommentById);
     app.get("/api/comment/picture/:id",findCommentsByPictureId);
 
@@ -42,6 +43,24 @@ module.exports = function(app,commentModel){
             .then(
                 function(response){
                     return commentModel.findComments()
+                }
+            )
+            .then(
+                function(comments){
+                    res.json(comments)
+                }
+            )
+
+    }
+
+    function createCommentByPicture(req,res){
+        var comment = req.body;
+        var id = req.params["pictureId"];
+
+        return commentModel.createComment(comment)
+            .then(
+                function(response){
+                    return commentModel.findCommentsByPicture(id)
                 }
             )
             .then(

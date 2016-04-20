@@ -26,7 +26,6 @@
         function selectUser(index){
             $scope.selectedUserIndex = index;
             $scope.user = $scope.users[index];
-            $rootScope.currentUser = $scope.users[index];
             console.log($rootScope.currentUser.role[0])
         }
 

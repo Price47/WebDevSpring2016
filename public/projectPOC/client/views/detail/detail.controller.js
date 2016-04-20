@@ -43,12 +43,13 @@
             CommentService.readCommentByPictureId($scope.photos[$rootScope.photoIndex]._id)
                 .then(handleSuccess,handleError)
         }
+
         function createMessage(message){
             if($rootScope.currentUser) {
                 var comment = {pictureId: $scope.photos[$rootScope.photoIndex]._id,
                     username: $rootScope.currentUser.username,
                     message: message};
-                CommentService.createComment(comment)
+                CommentService.createCommentByPictureId(comment,$scope.photos[$rootScope.photoIndex]._id)
                     .then(handleSuccess, handleError);
                 $scope.message = null
             }

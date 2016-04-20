@@ -5,46 +5,73 @@
     <title>Title</title>
 </head>
 <body>
-<h1>{{currentUser.username}}'s Profile</h1>
-<div class="login container-fluid  col-sm-12">
-    <div align="center" class="view-fields">
-        <div class="col-sm-3">
-            <input ng-model="profileUser.firstName" class="login-fields form-control"
-                   type="text" placeholder="First Name">
-        </div>
-        <div class="col-sm-3">
-            <input ng-model="profileUser.lastName" class="login-fields form-control"
-                   type="text" placeholder="Last Name">
-        </div>
-        <div class="col-sm-3">
-            <input ng-model="profileUser.username" class="login-fields form-control"
-                   type="text" placeholder="Username">
-        </div>
-        <div class="col-sm-3">
-            <input ng-model="profileUser.password" class="login-fields form-control"
-                   type="text" placeholder="Password">
-        </div>
-        <form role="form" style="float:left">
-            <div class="radio">
-                <label class="radio-text">
-                    <input ng-model="user.role" type="radio" aria-label="artist-radio"
-                           value="Artist" name="optregister"> Artist </label>
+<h1>Welcome {{currentUser.username}}</h1>
+<div class="login container-fluid col-sm-12">
+
+        <div align="center" class="view-fields">
+            <div class="col-sm-3">
+                <input ng-model="profileUser.firstName" class="login-fields form-control"
+                       type="text" placeholder="First Name">
             </div>
-            <div class="radio">
-                <label class="radio-text">
-                    <input ng-model="user.role" type="radio" aria-label="enthusiast-radio"
-                           value="Enthusiast" name="optregister">Art Enthusiast</label>
+            <div class="col-sm-3">
+                <input ng-model="profileUser.lastName" class="login-fields form-control"
+                       type="text" placeholder="Last Name">
             </div>
-        </form>
+            <div class="col-sm-3">
+                <input ng-model="profileUser.username" class="login-fields form-control"
+                       type="text" placeholder="Username">
+            </div>
+            <div class="col-sm-3">
+                <input ng-model="profileUser.password" class="login-fields form-control"
+                       type="text" placeholder="Password">
+            </div>
+        </div>
+</div>
+
+<div ng-show="editRolesBoolean" class="edit-roles">
+<form role="form" float="left">
+    <div class="radio">
+        <label class="radio-text">
+            <input ng-model="user.role" type="radio" aria-label="artist-radio"
+                   value="Artist" name="optregister"> Artist </label>
     </div>
-    <div style="float:right;margin-top:20px;margin-right:40px">
+    <div class="radio">
+        <label class="radio-text">
+            <input ng-model="user.role" type="radio" aria-label="enthusiast-radio"
+                   value="Enthusiast" name="optregister">Art Enthusiast</label>
+    </div>
+</form>
+</div>
+
+    <div style="margin-top: 10px;margin-right: 40px;float: right;">
         <button ng-click="update(profileUser)" class="login-link">Update</button>
     </div>
+    <div style="margin-top: 10px;margin-right: 40px;float: right;">
+        <button ng-click="editRole()" class="login-link">Edit Role</button>
+    </div>
 
-</div>
+
+
+
+
+
+<!--
 <input type = "file" file-model = "myFile"/>
 <button ng-click = "uploadFile()">upload me</button>
 
+<form role="form" float="left">
+        <div class="radio">
+            <label class="radio-text">
+                <input ng-model="user.role" type="radio" aria-label="artist-radio"
+                       value="Artist" name="optregister"> Artist </label>
+        </div>
+        <div class="radio">
+            <label class="radio-text">
+                <input ng-model="user.role" type="radio" aria-label="enthusiast-radio"
+                       value="Enthusiast" name="optregister">Art Enthusiast</label>
+        </div>
+</form>
+-->
 
 </body>
 </html>
