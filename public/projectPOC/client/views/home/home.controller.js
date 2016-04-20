@@ -16,7 +16,8 @@
                 PhotoService.readPhotos()
                     .then(handleSuccess, handleError);
 
-            }init();
+            }
+            init();
 
             function handleSuccess(response){
                 $scope.photos = response.data;
