@@ -18,12 +18,18 @@ module.exports = function() {
         createPhoto: createPhoto,
         readPhotoById: readPhotoById,
         readPhotos: readPhotos,
-        deletePhotoById: deletePhotoById
+        deletePhotoById: deletePhotoById,
+        addUser:addUser,
+        readPhotosByUser:readPhotosByUser
 
     };return api;
 
     function createPhoto(photo){
         return PhotoModel.create(photo);
+    }
+
+    function readPhotosByUser(id){
+        return PhotoModel.find({users: id})
     }
     function readPhotoById(id){
         return PhotoModel.find({_id:id})
@@ -33,6 +39,10 @@ module.exports = function() {
     }
     function deletePhotoById(id){
         return PhotoModel.remove({_id:id});
+    }
+
+    function addUser(userId,photoId){
+        return PhotoModel.update({_id:photoId},{$addToSet:{users:userId}})
     }
 
 

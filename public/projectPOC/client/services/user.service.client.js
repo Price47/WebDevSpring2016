@@ -9,8 +9,6 @@
     function UserService($rootScope, $http) {
         var api = {
 
-            setCurrentUser: setCurrentUser,
-            getCurrentUser: getCurrentUser,
             login: login,
             createUser: createUser,
             readUserById: readUserById,
@@ -18,6 +16,8 @@
             readUsers: readUsers,
             updateUser: updateUser,
             deleteUserById: deleteUserById,
+            readFavoritePhotos: readFavoritePhotos,
+            addFavoritePhoto:addFavoritePhoto
         };
         return api;
 
@@ -50,14 +50,12 @@
             return $http.delete("/api/user/" + id)
         }
 
-        function setCurrentUser(user,callback){
-            $http.post("/rest/user/current",user)
-                .success(callback)
+        function readFavoritePhotos(id){
+            return $http.get("/api/user/" + id + "/favorite")
         }
 
-        function getCurrentUser(callback){
-            $http.get("/rest/user/current")
-                .success(callback);
+        function addFavoritePhoto(id,photoId){
+            return $http.post("/api/user/" + id + "/" + photoId)
         }
 
 

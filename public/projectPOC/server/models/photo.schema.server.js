@@ -1,8 +1,8 @@
 module.exports = function(mongoose){
 
     var PhotoSchema = mongoose.Schema({
-        picture : String,
-        user: String
+        picture : {type:String,unique:true},
+        users: [String]
     },{collection:"photos"});
     return PhotoSchema;
 };

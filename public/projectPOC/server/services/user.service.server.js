@@ -14,14 +14,26 @@ module.exports = function(app,userModel){
     app.delete("/api/user/:id",deleteUserById);
     app.put("/api/user/:id",updateUser);
     app.get("/api/user/:username",findUserByUsername);
+    app.get("/api/user/:id/favorite",readFavoritePhotos);
+    app.post("/api/user/:id/favorite",addFavoritePhoto);
 
 
-    function authorized (req, res, next) {
-        if (!req.isAuthenticated()) {
-            res.send(401);
-        } else {
-            next();
-        }
+    function readFavoritePhotos(req,res){
+    }
+
+    function addFavoritePhoto(req,res){
+        var id = req.params["id"];
+        var pictureId = req.params["photoId"];
+
+        return userModel.addFavoritePhoto(id,pictureId)
+            .then(
+                function(response){
+                    return userModel.findAllUsers()
+                },
+                function(err){
+                    res.status(400).send(err);
+                }
+            )
     }
 
     function deleteUserById(req,res){

@@ -7,12 +7,13 @@
         .module("ProjectApp")
         .controller("DetailController", DetailController);
 
-    function DetailController($scope, $rootScope, $location, PhotoService,CommentService) {
+    function DetailController($scope, $rootScope, $location,UserService, PhotoService,CommentService) {
 
         $scope.createMessage = createMessage;
         $scope.deleteCommentById = deleteCommentById;
         $scope.next = next;
         $scope.previous = previous;
+        $scope.favoritePhoto = favoritePhoto;
 
         function init(){
 
@@ -21,6 +22,9 @@
 
         }init();
 
+        function favoritePhoto(){
+            PhotoService.addUser($rootScope.currentUser._id,$scope.photos[$rootScope.photoIndex]._id);
+        }
 
         function next(){
             if($rootScope.photoIndex == ($scope.photos.length-1)){
@@ -57,7 +61,10 @@
 
         function deleteCommentById(id){
             CommentService.deleteCommentById(id)
-                .then(handleSuccess,handleError)
+                .then(
+                    CommentService.readCommentByPictureId($scope.photos[$rootScope.photoIndex]._id)
+                        .then(handleSuccess,handleError)
+                )
         }
         function handleSuccess(response){
             $scope.comments = response.data;

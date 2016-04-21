@@ -10,7 +10,12 @@
                 ng-click="previous()"
                 class="glyphicon glyphicon-chevron-left"></button>
     </div>
-    <div class="col-sm-offset-10 col-sm-1">
+    <div class="col-sm-offset-4 col-sm-1">
+        <button ng-show="currentUser"
+                ng-click="favoritePhoto()"
+                class="glyphicon glyphicon-plus"></button>
+    </div>
+    <div class="col-sm-offset-4 col-sm-1">
         <button ng-click="next()"
                 class="glyphicon glyphicon-chevron-right"></button>
     </div>

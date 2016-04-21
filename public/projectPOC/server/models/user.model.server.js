@@ -17,7 +17,8 @@ module.exports = function(){
         findUserByCredentials: findUserByCredentials,
         findUserByUsername: findUserByUsername,
         createUser: createUser,
-        updateUser: updateUser
+        updateUser: updateUser,
+        addFavoritePhoto:addFavoritePhoto
     };return api;
 
     function findUserByUsername(username){
@@ -33,6 +34,12 @@ module.exports = function(){
     function updateUser(id,user){
         return UserModel.update({_id:id},{$set:user})
     }
+
+    function addFavoritePhoto(userId,photoId){
+        return UserModel.update({_id:userId},{$addToSet:{favoritePhotos:photoId}})
+    }
+
+
     function deleteUser(id){
         return UserModel.remove({_id:id})
     }

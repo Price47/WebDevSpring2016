@@ -51,27 +51,14 @@
     </div>
 
 
+<h2>Your Favorite Photo's</h2>
 
+<div    style="margin-top: 40px;"
+        ng-repeat="photo in photos"
+        ng-click="detailView($index)"
+        class="col-sm-6 col-xs-6">
+    <img src={{photo.picture}} style="width:375px;height:370px;">
 
-
-
-<!--
-<input type = "file" file-model = "myFile"/>
-<button ng-click = "uploadFile()">upload me</button>
-
-<form role="form" float="left">
-        <div class="radio">
-            <label class="radio-text">
-                <input ng-model="user.role" type="radio" aria-label="artist-radio"
-                       value="Artist" name="optregister"> Artist </label>
-        </div>
-        <div class="radio">
-            <label class="radio-text">
-                <input ng-model="user.role" type="radio" aria-label="enthusiast-radio"
-                       value="Enthusiast" name="optregister">Art Enthusiast</label>
-        </div>
-</form>
--->
-
+</div>
 </body>
 </html>

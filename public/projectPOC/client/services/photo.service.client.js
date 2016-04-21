@@ -8,9 +8,10 @@
 
             createPhoto: createPhoto,
             readPhotos: readPhotos,
-            readPhotoById: readPhotoById,
             readPhotosByUser: readPhotosByUser,
-            deletePhotoById: deletePhotoById
+            deletePhotoById: deletePhotoById,
+            addUser:addUser
+
         };
         return api;
 
@@ -22,10 +23,6 @@
             return $http.get("/api/photo");
         }
 
-        function readPhotoById(id){
-            return $http.get("/api/photo/" + id)
-        }
-
         function readPhotosByUser(userId){
             return $http.get("/api/photo/" + userId)
         }
@@ -33,6 +30,11 @@
         function deletePhotoById(id){
             $http.delete("/api/photo/" + id)
         }
+
+        function addUser(id,photoId){
+            return $http.post("/api/photo/" + id + "/" + photoId)
+        }
+
 
     }
 

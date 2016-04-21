@@ -3,12 +3,12 @@ var mongoose = require('mongoose');
 module.exports = function(app,photoModel) {
 
     app.get("/api/photo",readPhotos);
-    app.get("/api/photo/:id",readPhotoById);
-    app.get("/api/photo/:userId",readPhotosByUser);
     app.delete("/api/photo/:id",deletePhotoById);
+    app.get("/api/photo/:id",readPhotosByUser);
     app.post("/api/photo",createPhoto);
     app.post("/upload",upload);
     app.get("/file/:id",fileRead);
+    app.post("/api/photo/:userId/:photoId",addUser);
 
     function readPhotos(req,res){
         photoModel.readPhotos()
@@ -22,19 +22,19 @@ module.exports = function(app,photoModel) {
 
             )
     }
-    function readPhotoById(req,res){
-        var id = req.params["id"];
 
-        photoModel.readPhotoById(id)
+    function addUser(req,res){
+        var userId = req.params["userId"];
+        var photoId = req.params["photoId"];
+
+        return photoModel.addUser(userId,photoId)
             .then(
-                function(photo){
-                    res.json(photo);
-                },
-                function(err){
-                    res.status(400).send(err);
+                function(response){
                 }
             )
     }
+
+
     function deletePhotoById(req,res){
         var id = req.params["id"];
 
@@ -56,6 +56,10 @@ module.exports = function(app,photoModel) {
     }
 
     function readPhotosByUser(req,res){
+        var id = req.params["id"];
+
+        return photoModel.readPhotosByUser(id)
+
 
     }
 
