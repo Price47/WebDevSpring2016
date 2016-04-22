@@ -37,7 +37,10 @@
             })
             .when("/detail",{
                 templateUrl:"views/detail/detail.view.html",
-                controller:"DetailController"
+                controller:"DetailController",
+                resolve:{
+                    photoIndex: checkPhotoIndex
+                }
             })
             .otherwise({
                 redirectTo: "/home"
@@ -67,6 +70,18 @@
             deferred.reject();
         }
     return deferred.promise;
+    };
+
+    var checkPhotoIndex = function($q,$timeout,$location,$rootScope){
+        var deferred = $q.defer();
+
+        if($rootScope.photoIndex){
+            deferred.resolve();
+        }
+        else{
+            deferred.reject();
+        }
+        return deferred.promise;
     };
 
 
