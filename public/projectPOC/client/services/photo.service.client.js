@@ -10,7 +10,8 @@
             readPhotos: readPhotos,
             readPhotosByUser: readPhotosByUser,
             deletePhotoById: deletePhotoById,
-            addUser:addUser
+            addUser:addUser,
+            uploadPhoto:uploadPhoto
 
         };
         return api;
@@ -33,6 +34,10 @@
 
         function addUser(id,photoId){
             return $http.post("/api/photo/" + id + "/" + photoId)
+        }
+
+        function uploadPhoto(photo){
+            return $http.post("/api/photo/upload/",photo);
         }
 
 

@@ -7,16 +7,25 @@
         .module("ProjectApp")
         .controller("ProfileController", ProfileController);
 
-    function ProfileController($rootScope,$scope,$http,UserService,PhotoService){
+    function ProfileController($rootScope,$scope,$http,UserService,PhotoService) {
 
         $scope.profileUser = $rootScope.currentUser;
         $scope.editRolesBoolean = false;
+        $scope.uploadBoolean = false;
+        $scope.userPhotosBoolean = true;
+        $scope.favoritePhotosBoolean = false;
+
 
 
         $scope.update = update;
         $scope.uploadFile = uploadFile;
         $scope.editRole = editRole;
         $scope.detailView = detailView;
+        $scope.uploadLink = uploadLink;
+        $scope.uploadPicture = uploadPicture;
+        $scope.showAllPhotos = showAllPhotos;
+        $scope.showUserPhotos = showUserPhotos;
+        $scope.showFavoritePhotos = showFavoritePhotos;
 
         function init() {
             PhotoService.readPhotosByUser($rootScope.currentUser._id)
@@ -25,38 +34,67 @@
         }
         init();
 
+        function showAllPhotos(){
+            $scope.userPhotosBoolean = true;
+            $scope.favoritePhotosBoolean = true;
+        }
+
+        function showUserPhotos(){
+            $scope.userPhotosBoolean = true;
+            $scope.favoritePhotosBoolean = false;
+        }
+
+        function showFavoritePhotos(){
+            $scope.userPhotosBoolean = false;
+            $scope.favoritePhotosBoolean = true;
+        }
+
+        function uploadLink(){
+            $scope.uploadBoolean = !$scope.uploadBoolean;
+        }
+
+        function uploadPicture(file){
+            if(file) {
+                var photo = {picture: String(file), createdBy: $scope.profileUser._id};
+
+                PhotoService.uploadPhoto(photo)
+                    .then(
+                        PhotoService.readPhotosByUser($scope.profileUser._id)
+                            .then(handleSuccess, handleError),
+                        handleError);
+
+                $scope.file = null;
+                $scope.uploadBoolean = false;
+            }s
+        }
 
 
-        function detailView(index){
+        function detailView(index) {
             $rootScope.photoIndex = index;
             $location.url("/detail")
         }
 
-        function uploadFile(){
+        function uploadFile() {
             var file = $scope.myFile;
-            $http.post("/upload",file)
+            $http.post("/upload", file)
         }
 
-        function editRole(){
+        function editRole() {
             $scope.editRolesBoolean = !$scope.editRolesBoolean
         }
 
-        function update(user){
+        function update(user) {
             UserService.updateUser(user);
             $scope.editRolesBoolean = false;
         }
 
-        function handleSuccess(response){
-            $scope.photos = response.data;
-            console.log("success")
+        function handleSuccess(response) {
+            $scope.favoritePhotos = response.data;
         }
 
-        function handleError(err){
+        function handleError(err) {
             $scope.error = err;
         }
-
-
-
 
     }
 })();

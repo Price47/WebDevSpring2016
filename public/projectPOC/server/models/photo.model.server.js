@@ -22,6 +22,7 @@ module.exports = function() {
         addUser:addUser,
         readPhotosByUser:readPhotosByUser
 
+
     };return api;
 
     function createPhoto(photo){

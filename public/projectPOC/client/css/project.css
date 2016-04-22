@@ -50,17 +50,17 @@ a:visited{
 
 #navbar > ul > li > a:link{
     color: whitesmoke;
-    background-color: #555555;
+    background-color: #428bca;
 }
 
 #navbar > ul > li > a:hover{
     color: whitesmoke !important;
-    background-color: #555555;
+    background-color:#555555; !important;
 }
 
 #navbar > ul > li > a:active{
     color:  whitesmoke !important;
-    background-color: #555555 !important;
+    background-color: #428bca !important;
 }
 
 #navbar > ul > li > a:visited{
@@ -84,7 +84,7 @@ a:visited{
 }
 
 .nav-login  > li > a:visited{
-    color: #FAB6B6;
+    color: whitesmoke;
     background-color: #428bca;
 }
 

@@ -2,10 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Profile</title>
 </head>
 <body>
-<h1>Welcome {{currentUser.username}}</h1>
+<div class="row">
+    <h1>Welcome {{profileUser.username}}</h1>
+    <button ng-click="showUserPhotos()"
+            class="login-link" style="float:left;margin-left: 40px;margin-bottom: 20px;">
+        Your Photo's
+    </button>
+    <button ng-click="showFavoritePhotos()"
+            class="login-link" style="float:left">
+        Your Favorite Photo's
+    </button>
+    <button ng-click="showAllPhotos()"
+            class="login-link" style="float:left">
+        All Photo's
+    </button>
+</div>
 <div class="login container-fluid col-sm-12">
 
         <div align="center" class="view-fields">
@@ -42,6 +56,16 @@
     </div>
 </form>
 </div>
+<div class="row">
+    <div style="float: left;margin-left: 40px;margin-top: 10px;">
+        <button ng-click="uploadLink()" class="login-link">Upload</button>
+    </div>
+
+    <div ng-show="uploadBoolean" style="float:left">
+        <input ng-model="link"
+               style="margin-top: 10px;" type="text">
+        <button ng-click="uploadPicture(link)">Confirm</button>
+    </div>
 
     <div style="margin-top: 10px;margin-right: 40px;float: right;">
         <button ng-click="update(profileUser)" class="login-link">Update</button>
@@ -49,16 +73,36 @@
     <div style="margin-top: 10px;margin-right: 40px;float: right;">
         <button ng-click="editRole()" class="login-link">Edit Role</button>
     </div>
+</div>
+<!--
+<button>
+    <input type="file" ng-file-select="onFileSelect($files)">
+</button>
+<span data-ng-if="uploadInProgress">Upload progress: {{ uploadProgress }}</span>
+<img data-ng-src="uploadedImage" data-ng-if="uploadedImage">
+-->
+<div class="row" ng-show="userPhotosBoolean">
+    <h2>Your Photo's</h2>
 
+    <div    style="margin-top: 40px;"
+            ng-repeat="photo in favoritePhotos"
+            ng-click="detailView($index)"
+            class="col-sm-6 col-xs-6">
+        <img src={{photo.picture}} style="width:375px;height:370px;">
 
-<h2>Your Favorite Photo's</h2>
+    </div>
+</div>
 
-<div    style="margin-top: 40px;"
-        ng-repeat="photo in photos"
-        ng-click="detailView($index)"
-        class="col-sm-6 col-xs-6">
-    <img src={{photo.picture}} style="width:375px;height:370px;">
+<div class="row" ng-show="favoritePhotosBoolean">
+    <h2>Your Favorite Photo's</h2>
 
+    <div    style="margin-top: 40px;"
+            ng-repeat="photo in favoritePhotos"
+            ng-click="detailView($index)"
+            class="col-sm-6 col-xs-6">
+        <img src={{photo.picture}} style="width:375px;height:370px;">
+
+    </div>
 </div>
 </body>
 </html>
