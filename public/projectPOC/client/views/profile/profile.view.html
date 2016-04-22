@@ -58,7 +58,7 @@
 </div>
 <div class="row">
     <div style="float: left;margin-left: 40px;margin-top: 10px;">
-        <button ng-click="uploadLink()" class="login-link">Upload</button>
+        <button ng-click="uploadLink()" class="login-link">Upload Image Link</button>
     </div>
 
     <div ng-show="uploadBoolean" style="float:left">
@@ -85,7 +85,7 @@
     <h2>Your Photo's</h2>
 
     <div    style="margin-top: 40px;"
-            ng-repeat="photo in favoritePhotos"
+            ng-repeat="photo in userPhotos"
             ng-click="detailView($index)"
             class="col-sm-6 col-xs-6">
         <img src={{photo.picture}} style="width:375px;height:370px;">

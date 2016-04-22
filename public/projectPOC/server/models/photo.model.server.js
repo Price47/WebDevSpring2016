@@ -20,13 +20,18 @@ module.exports = function() {
         readPhotos: readPhotos,
         deletePhotoById: deletePhotoById,
         addUser:addUser,
-        readPhotosByUser:readPhotosByUser
+        readPhotosByUser:readPhotosByUser,
+        readUserPhotos:readUserPhotos
 
 
     };return api;
 
     function createPhoto(photo){
         return PhotoModel.create(photo);
+    }
+
+    function readUserPhotos(id){
+        return PhotoModel.find({createdBy:id})
     }
 
     function readPhotosByUser(id){

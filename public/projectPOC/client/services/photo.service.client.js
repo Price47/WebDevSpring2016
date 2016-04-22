@@ -11,10 +11,15 @@
             readPhotosByUser: readPhotosByUser,
             deletePhotoById: deletePhotoById,
             addUser:addUser,
-            uploadPhoto:uploadPhoto
+            uploadPhoto:uploadPhoto,
+            readUserPhotos: readUserPhotos
 
         };
         return api;
+
+        function readUserPhotos(id){
+            return $http.get("/api/photo/owner/"+id);
+        }
 
         function createPhoto(photo){
             return $http.post("/api/photo");

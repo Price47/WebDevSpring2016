@@ -31,6 +31,10 @@
             PhotoService.readPhotosByUser($rootScope.currentUser._id)
                 .then(handleSuccess, handleError);
 
+            PhotoService.readUserPhotos($rootScope.currentUser._id)
+                .then(handleUserPhotoSuccess, handleError)
+
+
         }
         init();
 
@@ -59,13 +63,13 @@
 
                 PhotoService.uploadPhoto(photo)
                     .then(
-                        PhotoService.readPhotosByUser($scope.profileUser._id)
-                            .then(handleSuccess, handleError),
+                        PhotoService.readUserPhotos($scope.profileUser._id)
+                            .then(handleUserPhotoSuccess, handleError),
                         handleError);
 
                 $scope.file = null;
                 $scope.uploadBoolean = false;
-            }s
+            }
         }
 
 
@@ -90,6 +94,10 @@
 
         function handleSuccess(response) {
             $scope.favoritePhotos = response.data;
+        }
+
+        function handleUserPhotoSuccess(response){
+            $scope.userPhotos = response.data
         }
 
         function handleError(err) {

@@ -10,6 +10,7 @@ module.exports = function(app,photoModel) {
     app.post("/api/photo/upload",uploadPhoto);
     app.post("/api/photo/:userId/:photoId",addUser);
     app.post("/api/photo/upload/image");
+    app.get("/api/photo/owner/:id",readUserPhotos);
 
     function readPhotos(req,res){
         photoModel.readPhotos()
@@ -22,6 +23,22 @@ module.exports = function(app,photoModel) {
                 }
 
             )
+    }
+
+    function readUserPhotos(req,res){
+        var id = req.params["id"];
+
+        photoModel.readUserPhotos(id)
+            .then(
+                function(photos){
+                    res.json(photos)
+                },
+                function(err){
+                    res.status(400).send(err)
+                }
+            )
+
+
     }
 
     function uploadPhoto(req,res){
