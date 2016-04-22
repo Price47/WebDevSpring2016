@@ -59,6 +59,14 @@ module.exports = function(app,photoModel) {
         var id = req.params["id"];
 
         return photoModel.readPhotosByUser(id)
+            .then(
+                function(photos){
+                    res.json(photos)
+                },
+                function(err){
+                    res.status(400).send(err)
+                }
+            )
 
 
     }

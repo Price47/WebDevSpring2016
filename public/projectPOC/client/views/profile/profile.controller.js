@@ -19,7 +19,7 @@
         $scope.detailView = detailView;
 
         function init() {
-            PhotoService.readPhotosByUser($rootScope.currentUser)
+            PhotoService.readPhotosByUser($rootScope.currentUser._id)
                 .then(handleSuccess, handleError);
 
         }
@@ -48,6 +48,7 @@
 
         function handleSuccess(response){
             $scope.photos = response.data;
+            console.log("success")
         }
 
         function handleError(err){

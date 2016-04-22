@@ -55,7 +55,7 @@ module.exports = function(app,userModel){
         }
 
     function findUserByUsername(req,res){
-        var username = req.params["username"]
+        var username = req.params["username"];
 
         return userModel.findUserByUsername(username)
             .then(
