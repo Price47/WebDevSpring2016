@@ -19,11 +19,17 @@
             })
             .when("/profile",{
                 templateUrl: "views/profile/profile.view.html",
-                controller: "ProfileController"
+                controller: "ProfileController",
+                resolve: {
+                    loggedIn: checkUser
+                }
             })
             .when("/profile-admin",{
                 templateUrl: "views/admin-profile/admin-profile.view.html",
-                controller: "AdminProfileController"
+                controller: "AdminProfileController",
+                resolve:{
+                    loggedIn: checkAdmin
+                }
             })
             .when("/register",{
                 templateUrl: "views/register/register.view.html",
@@ -37,6 +43,35 @@
                 redirectTo: "/home"
             })
     }
+
+    var checkUser = function($q,$timeout,$location,$rootScope){
+        var deferred = $q.defer();
+
+        if($rootScope.currentUser){
+            deferred.resolve();
+        }
+        else{
+            deferred.reject();
+        }
+
+    return deferred.promise;
+    };
+
+    var checkAdmin = function($q,$timeout,$location,$rootScope){
+        var deferred = $q.defer();
+
+        if($rootScope.currentUser.role=='admin'){
+            deferred.resolve();
+        }
+        else{
+            deferred.reject();
+        }
+    return deferred.promise;
+    };
+
+
+
+
 
 
 })();
