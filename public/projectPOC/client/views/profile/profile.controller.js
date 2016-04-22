@@ -7,7 +7,7 @@
         .module("ProjectApp")
         .controller("ProfileController", ProfileController);
 
-    function ProfileController($rootScope,$scope,$http,UserService,PhotoService) {
+    function ProfileController($rootScope,$scope,$http,$location,UserService,PhotoService) {
 
         $scope.profileUser = $rootScope.currentUser;
         $scope.editRolesBoolean = false;
