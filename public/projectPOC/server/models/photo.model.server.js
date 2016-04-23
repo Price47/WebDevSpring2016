@@ -6,6 +6,7 @@ module.exports = function() {
     var PhotoModel = mongoose.model('Photo', PhotoSchema);
 
     function init() {
+        PhotoModel.remove({});
         PhotoModel.create({picture: "http://indianapublicmedia.org/support/files/2011/09/04_03_1-Stock-Market-Prices_web.jpg"});
         PhotoModel.create({picture: "https://bootstrapbay.com/blog/wp-content/uploads/2014/05/stocksnap-free-stock-photos1.jpg"});
         PhotoModel.create({picture: "http://static.bigstockphoto.com/images/homepage/2016_bigstock_picks.jpg"});
