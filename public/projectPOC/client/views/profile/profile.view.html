@@ -89,6 +89,8 @@
             ng-click="detailView($index)"
             class="col-sm-6 col-xs-6">
         <img src={{photo.picture}} style="width:375px;height:370px;">
+        <button ng-click="removePhoto($index)"
+                class="glyphicon glyphicon-remove"></button>
 
     </div>
 </div>

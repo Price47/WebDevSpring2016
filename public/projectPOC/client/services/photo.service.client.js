@@ -34,7 +34,7 @@
         }
 
         function deletePhotoById(id){
-            $http.delete("/api/photo/" + id)
+            return $http.delete("/api/photo/" + id)
         }
 
         function addUser(id,photoId){
@@ -44,6 +44,7 @@
         function uploadPhoto(photo){
             return $http.post("/api/photo/upload/",photo);
         }
+
 
 
     }

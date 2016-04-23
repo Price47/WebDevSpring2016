@@ -73,7 +73,7 @@ module.exports = function(app,photoModel) {
         return photoModel.deletePhotoById(id)
             .then(
                 function(response){
-                    return photoModel.readPhotos
+                    return photoModel.readPhotos()
                 }
             )
             .then(

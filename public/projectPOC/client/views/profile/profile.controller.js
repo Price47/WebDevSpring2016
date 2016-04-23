@@ -26,6 +26,7 @@
         $scope.showAllPhotos = showAllPhotos;
         $scope.showUserPhotos = showUserPhotos;
         $scope.showFavoritePhotos = showFavoritePhotos;
+        $scope.removePhoto = removePhoto;
 
         function init() {
             PhotoService.readPhotosByUser($rootScope.currentUser._id)
@@ -37,6 +38,17 @@
 
         }
         init();
+
+        function removePhoto(index){
+            var photoId = $scope.userPhotos[index]._id;
+
+            PhotoService.deletePhotoById(photoId)
+                .then(
+                    PhotoService.readUserPhotos($rootScope.currentUser._id)
+                        .then(handleUserPhotoSuccess,handleError)
+                    ,handleError
+                )
+        }
 
         function showAllPhotos(){
             $scope.userPhotosBoolean = true;
