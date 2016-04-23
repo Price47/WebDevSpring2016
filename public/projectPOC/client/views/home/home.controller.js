@@ -12,6 +12,7 @@
 
             $scope.detailView = detailView;
 
+
             function init() {
                 PhotoService.readPhotos()
                     .then(handleSuccess, handleError);
@@ -31,7 +32,9 @@
                 $rootScope.photoIndex = index;
                 $location.url("/detail")
             }
+
         }
+
     }
 
 )();

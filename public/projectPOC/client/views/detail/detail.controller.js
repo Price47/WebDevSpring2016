@@ -15,6 +15,7 @@
         $scope.previous = previous;
         $scope.favoritePhoto = favoritePhoto;
 
+
         function init(){
 
             PhotoService.readPhotos()
@@ -84,5 +85,7 @@
         function handlePhotoErr(err){
             $scope.photoErr = err;
         }
+
+
     }
 })();
