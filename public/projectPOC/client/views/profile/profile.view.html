@@ -58,7 +58,8 @@
 </div>
 <div class="row">
     <div style="float: left;margin-left: 40px;margin-top: 10px;">
-        <button ng-click="uploadLink()" class="login-link">Upload Image Link</button>
+        <button ng-show="currentUser.role=='Artist'"
+                ng-click="uploadLink()" class="login-link">Upload Image Link</button>
     </div>
 
     <div ng-show="uploadBoolean" style="float:left">

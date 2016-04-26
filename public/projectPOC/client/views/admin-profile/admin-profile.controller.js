@@ -6,21 +6,30 @@
         .module("ProjectApp")
         .controller("AdminProfileController", AdminProfileController);
 
-    function AdminProfileController($rootScope,$scope,$location,UserService){
+    function AdminProfileController($rootScope,$scope,$location,UserService,PhotoService){
 
-        var vm = this;
+
 
         $scope.deleteUser = deleteUser;
         $scope.selectUser = selectUser;
         $scope.updateUser = updateUser;
         $scope.createUser = createUser;
+        $scope.deletePhoto = deletePhoto;
 
 
 
         function init(){
             UserService.readUsers()
-                .then(handleSuccess,handleError)
+                .then(handleSuccess,handleError);
+
+            PhotoService.readPhotos()
+                .then(handlePhotoSuccess, handlePhotoError);
         }init();
+
+        function deletePhoto(id){
+            PhotoService.deletePhotoById(id)
+                .then(handlePhotoSuccess,handlePhotoError);
+        }
 
 
         function selectUser(index){
@@ -52,6 +61,14 @@
 
         function handleError(err){
             $scope.error = err;
+        }
+
+        function handlePhotoSuccess(response){
+            $scope.photos = response.data;
+        }
+
+        function handlePhotoError(err){
+            $scope.photoError = err;
         }
     }
 })();
